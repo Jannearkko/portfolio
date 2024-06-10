@@ -14,13 +14,13 @@ const Sidebar: React.FC = () => {
       <h1 className="text-xl font-bold">Janne Arkko</h1>
       <p className="text-gray-400">Developer</p>
       <div className="flex space-x-4 my-4">
-        <a href="https://www.linkedin.com/in/jannearkko" className="text-white hover:text-gray-400">
-          <LinkedInIcon />
+        <a href="https://www.linkedin.com/in/jannearkko/" className="text-white hover:text-gray-400">
+            <LinkedInIcon />
         </a>
         <a href="https://github.com/Jannearkko" className="text-white hover:text-gray-400">
-          <GitHubIcon />
+            <GitHubIcon />
         </a>
-      </div>
+        </div>
       <nav className="flex flex-col space-y-2 w-full">
         <a href="#home" className="text-white hover:bg-gray-700 p-2 rounded">
           Home
