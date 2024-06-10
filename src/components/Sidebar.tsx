@@ -14,7 +14,7 @@ const Sidebar: React.FC = () => {
       <h1 className="text-xl font-bold">Janne Arkko</h1>
       <p className="text-gray-400">Developer</p>
       <div className="flex space-x-4 my-4">
-        <a href="www.linkedin.com/in/janne-arkko-a67062210" className="text-white hover:text-gray-400">
+        <a href="https://www.linkedin.com/in/jannearkko" className="text-white hover:text-gray-400">
           <LinkedInIcon />
         </a>
         <a href="https://github.com/Jannearkko" className="text-white hover:text-gray-400">
