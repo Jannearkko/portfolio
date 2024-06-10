@@ -3,7 +3,6 @@ import { BrowserRouter as Router } from 'react-router-dom';
 import Sidebar from './components/Sidebar';
 import Content from './components/Content';
 import Sphere from './components/Sphere';
-import backgroundImage from './src/images/bg.jpg';
 import './App.css';
 
 const App: React.FC = () => {
