@@ -10,6 +10,7 @@ module.exports = {
         'bg-blue-600', 'hover:bg-blue-700',
         'bg-red-600', 'hover:bg-red-700',
         'bg-gray-600', 'hover:bg-gray-700',
+        'bg-customBlue', 'hover:bg-customBlue'
         // Add more classes as needed
       ],
     },
@@ -23,6 +24,9 @@ module.exports = {
     extend: {
       width: {
         '1080': '1080px'
+      },
+      colors: {
+        customBlue: 'rgba(0,0,255,0.555)',
       },
       keyframes: {
         spin: {
