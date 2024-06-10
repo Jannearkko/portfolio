@@ -1,4 +1,8 @@
 name: Deploy to GitHub Pages
+author: Janne Arkko
+
+runs:
+  using: 'node20'
 
 on:
   push:
