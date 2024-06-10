@@ -1,8 +1,4 @@
 name: Deploy to GitHub Pages
-author: Janne Arkko
-
-runs:
-  using: 'node20'
 
 on:
   push:
@@ -41,4 +37,5 @@ jobs:
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
         publish_dir: ./build
+
 
