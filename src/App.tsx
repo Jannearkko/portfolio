@@ -1,26 +1,27 @@
 import React from 'react';
-import logo from './logo.svg';
+import { BrowserRouter as Router } from 'react-router-dom';
+import Sidebar from './components/Sidebar';
+import Content from './components/Content';
+import Sphere from './components/Sphere';
+import backgroundImage from './src/images/bg.jpg';
 import './App.css';
 
-function App() {
+const App: React.FC = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.SIis vieläkin toimii?KO?
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="min-h-screen text-white flex justify-center animated-bg">
+      <Router>
+        <div className="w-full max-w-screen-xl flex bg-gradient-to-r from-gray-900 to-gray-700 content-wrapper">
+          <Sidebar />
+          <Content />
+        </div>
+      </Router>
+      <Sphere size={300} startX={100} startY={100} speedX={1} speedY={1} />
+      <Sphere size={300} startX={400} startY={200} speedX={-1} speedY={0.5} />
     </div>
   );
-}
+};
 
 export default App;
+
+
+
