@@ -1,16 +1,27 @@
 {
   "files": {
-    "main.css": "/portfolio/static/css/main.b29c0162.css",
-    "main.js": "/portfolio/static/js/main.eaf4b7c7.js",
+    "main.css": "/portfolio/static/css/main.809004de.css",
+    "main.js": "/portfolio/static/js/main.bc9c2969.js",
     "static/js/453.ace21015.chunk.js": "/portfolio/static/js/453.ace21015.chunk.js",
+    "static/media/tulentekoapp.png": "/portfolio/static/media/tulentekoapp.6dede777a6e9c64a3418.png",
     "static/media/omakuva.jpg": "/portfolio/static/media/omakuva.412ee1829f044cf198e9.jpg",
+    "static/media/tulentekoapp_1.png": "/portfolio/static/media/tulentekoapp_1.2d39c721a1732c9ce67c.png",
+    "static/media/tulentekoapp_2.png": "/portfolio/static/media/tulentekoapp_2.a60820ac54c915d2890d.png",
+    "static/media/tulentekoapp_3.png": "/portfolio/static/media/tulentekoapp_3.4a2af6556649e640fd32.png",
+    "static/media/palvelin_toiminta.png": "/portfolio/static/media/palvelin_toiminta.b2a459575886f20487a1.png",
+    "static/media/rakenne.png": "/portfolio/static/media/rakenne.9ab2c4edf37bcfdddd05.png",
+    "static/media/skeleton.png": "/portfolio/static/media/skeleton.d3f8e68530aa50a4f6cc.png",
+    "static/media/routes.png": "/portfolio/static/media/routes.7df235329b20361baefc.png",
+    "static/media/UI_logged_in.png": "/portfolio/static/media/UI_logged_in.0325159891d3f9f6ca2a.png",
+    "static/media/tietokanta.png": "/portfolio/static/media/tietokanta.eab872af96bc0ff1a2bd.png",
+    "static/media/UI_login.png": "/portfolio/static/media/UI_login.78bace9c707672bf216f.png",
     "index.html": "/portfolio/index.html",
-    "main.b29c0162.css.map": "/portfolio/static/css/main.b29c0162.css.map",
-    "main.eaf4b7c7.js.map": "/portfolio/static/js/main.eaf4b7c7.js.map",
+    "main.809004de.css.map": "/portfolio/static/css/main.809004de.css.map",
+    "main.bc9c2969.js.map": "/portfolio/static/js/main.bc9c2969.js.map",
     "453.ace21015.chunk.js.map": "/portfolio/static/js/453.ace21015.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.b29c0162.css",
-    "static/js/main.eaf4b7c7.js"
+    "static/css/main.809004de.css",
+    "static/js/main.bc9c2969.js"
   ]
 }
