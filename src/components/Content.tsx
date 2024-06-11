@@ -16,6 +16,8 @@ const Content: React.FC<{ onSectionChange: (id: string) => void }> = ({ onSectio
   const sectionRefs = useRef<any[]>([]);
 
   useEffect(() => {
+    const currentRefs = sectionRefs.current;
+    
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -27,13 +29,12 @@ const Content: React.FC<{ onSectionChange: (id: string) => void }> = ({ onSectio
       { threshold: 0.6 }
     );
 
-    sectionRefs.current.forEach((ref) => {
+    currentRefs.forEach((ref) => {
       if (ref) observer.observe(ref);
     });
 
     return () => {
-      /* eslint-disable-next-line no-unused-vars */
-      sectionRefs.current.forEach((ref) => {
+      currentRefs.forEach((ref) => {
         if (ref) observer.unobserve(ref);
       });
     };
