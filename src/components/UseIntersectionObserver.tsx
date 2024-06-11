@@ -13,16 +13,19 @@ const useIntersectionObserver = (options: IntersectionObserverInit) => {
   };
 
   useEffect(() => {
+    const currentRef = containerRef.current;
     const observer = new IntersectionObserver(callbackFunction, options);
-    if (containerRef.current) observer.observe(containerRef.current);
+    
+    if (currentRef) observer.observe(currentRef);
 
     return () => {
-      if (containerRef.current) observer.unobserve(containerRef.current);
+      if (currentRef) observer.unobserve(currentRef);
     };
-  }, [containerRef, options]);
+  }, [options]);
 
   return containerRef;
 };
 
 export default useIntersectionObserver;
+
 
