@@ -1,5 +1,5 @@
 import React from 'react';
-import { FaUniversity, FaBriefcase } from 'react-icons/fa';
+import { FaUniversity, FaBriefcase, FaCertificate } from 'react-icons/fa';
 import { CircularProgressbar, buildStyles } from 'react-circular-progressbar';
 import 'react-circular-progressbar/dist/styles.css';
 import useIntersectionObserver from './UseIntersectionObserver';
@@ -9,7 +9,7 @@ const educationData = [
     degree: 'Bachelor of IT',
     institution: 'JAMK University of Applied Science',
     years: '2021 - 2024',
-    points: '240 ETCS',
+    points: '240 ECTS',
     gpa: 'GPA 4.6/5',
     description: 'Advanced studies on software development and AI',
     completed: 'Completed 86 %'
@@ -43,9 +43,14 @@ const designSkills = [
 const softSkills = [
     { skill: 'Communication', percentage: 90 },
     { skill: 'Teamwork', percentage: 85 },
-    { skill: 'Problem Solving', percentage: 88 },
-    { skill: 'Time Management', percentage: 95 }
-  ];
+    { skill: 'Problem Solving', percentage: 95 },
+    { skill: 'Time Management', percentage: 92 }
+];
+const certificates = [
+  { certificate: 'EITCA/GCML', id: 'EITC/AI/GCML/SLJ24004528', type: 'EITC The European Information Technologies Certification Programme', programme:'EITC/AI/GCML Google Cloud Machine Learning', issued: 'April 2024', validateAddress: 'https://www.eitci.org/validate' },
+  { certificate: 'EITCA/GCP', id: 'EITC/CL/GCP/SLJ24004528', type: 'EITC The European Information Technologies Certification Programme', programme:'EITC/CL/GCP Google Cloud Platform', issued: 'April 2024', validateAddress: 'https://www.eitci.org/validate'},
+  { certificate: 'EITCA/PPF', id: 'EITC/CP/PPF/SLJ24004528', type: 'EITC The European Information Technologies Certification Programme', programme:'EITC/CP/PPF Python Programming Fundamentals', issued: 'April 2024', validateAddress: 'https://www.eitci.org/validate'},
+]
   
 const Resume: React.FC = () => {
     const options: IntersectionObserverInit = {
@@ -64,7 +69,7 @@ const Resume: React.FC = () => {
             <div>
               <h2 className="text-3xl font-bold mb-4 flex items-center">
                 <FaUniversity className="mr-2" /> Education.
-                <div className="flex-grow h-px bg-gray-500 ml-4"></div>
+                <div className="flex-grow h-px bg-gray-500 ml-4 mt-5"></div>
               </h2>
               {educationData.map((item, index) => (
                 <div key={index} className="mb-8">
@@ -82,7 +87,7 @@ const Resume: React.FC = () => {
             <div>
               <h2 className="text-3xl font-bold mb-4 flex items-center">
                 <FaBriefcase className="mr-2" /> Experience.
-                <div className="flex-grow h-px bg-gray-500 ml-4"></div>
+                <div className="flex-grow h-px bg-gray-500 ml-4 mt-5"></div>
               </h2>
               {experienceData.map((item, index) => (
                 <div key={index} className="mb-8">
@@ -154,7 +159,34 @@ const Resume: React.FC = () => {
                 ))}
               </div>
             </div>
+            
           </div>
+            <h2 className="text-3xl font-bold mb-4 flex items-center mt-20">
+                  <FaCertificate className="mr-2" /> Certificates.
+                  <div className="flex-grow h-px bg-gray-500 ml-4 mt-5"></div>
+            </h2>
+            
+            <p className='italic text-gray-400 mb-4'>* To validate EITCA-certificates, click the Validate-button and insert the certificate ID and my name.</p>
+
+          <div className='mt-10 grid grid-cols-1 md:grid-cols-2 gap-8'>
+              {certificates.map((item, index) => (
+                <div key={index} className="mb-8">
+                  <h3 className="text-xl font-bold">{item.certificate}</h3>
+                  <p className="text-gray-400">Type: {item.type}</p>
+                  <p className="text-gray-400">ID: {item.id}</p>
+                  <p className="text-gray-400">Name: {item.programme}</p>
+                  <p className="text-gray-400">Issued: {item.issued}</p>
+                  <a
+                    href={item.validateAddress}
+                    className="text-white bg-blue-500 hover:bg-blue-700 py-2 px-4 rounded-xl transition duration-300 inline-block mt-2"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Validate
+                  </a>
+                </div>
+              ))}
+            </div>
         </div>
       </section>
     );

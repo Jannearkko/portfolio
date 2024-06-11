@@ -3,12 +3,13 @@ import '../App.css';
 import Home from './Home';
 import About from './About';
 import Resume from './Resume';
+import Portfolio from './Portfolio';
 
 const sections = [
   { id: 'home', content: <Home /> },
   { id: 'about', content: <About /> },
   { id: 'resume', content: <Resume /> },
-  { id: 'portfolio', title: 'Portfolio', content: 'This is the Portfolio section.' },
+  { id: 'portfolio', content: <Portfolio /> },
   { id: 'contact', title: 'Contact', content: 'This is the Contact section.' },
 ];
 
