@@ -1,19 +1,52 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
+import '../App.css';
+import Home from './Home';
+import About from './About';
+import Resume from './Resume';
 
 const sections = [
-  { id: 'home', title: 'Home', content: 'This is the Home section.' },
-  { id: 'about', title: 'About', content: 'This is the About section.' },
-  { id: 'resume', title: 'Resume', content: 'This is the Resume section.' },
-  { id: 'services', title: 'Services', content: 'This is the Services section.' },
+  { id: 'home', content: <Home /> },
+  { id: 'about', content: <About /> },
+  { id: 'resume', content: <Resume /> },
   { id: 'portfolio', title: 'Portfolio', content: 'This is the Portfolio section.' },
   { id: 'contact', title: 'Contact', content: 'This is the Contact section.' },
 ];
 
-const Content: React.FC = () => {
+const Content: React.FC<{ onSectionChange: (id: string) => void }> = ({ onSectionChange }) => {
+  const sectionRefs = useRef<any[]>([]);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            onSectionChange(entry.target.id);
+          }
+        });
+      },
+      { threshold: 0.6 }
+    );
+
+    sectionRefs.current.forEach((ref) => {
+      if (ref) observer.observe(ref);
+    });
+
+    return () => {
+      sectionRefs.current.forEach((ref) => {
+        if (ref) observer.unobserve(ref);
+      });
+    };
+  }, [onSectionChange]);
+
   return (
     <main className="flex-1 p-4 ml-64 overflow-y-auto h-screen">
-      {sections.map((section) => (
-        <section id={section.id} key={section.id} className="mb-8">
+      {sections.map((section, index) => (
+        <section
+          ref={(el) => (sectionRefs.current[index] = el)}
+          id={section.id}
+          key={section.id}
+          className="section-spacing"
+        >
           <h2 className="text-2xl font-bold mb-2">{section.title}</h2>
           <p>{section.content}</p>
         </section>
@@ -23,3 +56,4 @@ const Content: React.FC = () => {
 };
 
 export default Content;
+

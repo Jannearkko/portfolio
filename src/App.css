@@ -14,7 +14,9 @@
   width: 100%;
   display: flex;
 }
-
+.section-spacing {
+  margin-bottom: 10rem;
+}
 
 
 

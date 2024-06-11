@@ -12,15 +12,15 @@ const Sphere: React.FC<SphereProps> = ({ size, startX, startY, speedX, speedY })
   const sphereRef = useRef<HTMLDivElement>(null);
   const [position, setPosition] = useState({ x: startX, y: startY });
   const [velocity, setVelocity] = useState({ x: speedX, y: speedY });
-  const [hue, setHue] = useState(Math.floor(Math.random() * 360));
-
+  //const [hue, setHue] = useState(Math.floor(Math.random() * 360));
+  const hue = 240;
   useEffect(() => {
     const updatePosition = () => {
       setPosition((prev) => {
         let newX = prev.x + velocity.x;
         let newY = prev.y + velocity.y;
 
-        const maxX = window.innerWidth * 0.5; // 50% of the viewport width
+        const maxX = window.innerWidth; // 50% of the viewport width
         const maxY = window.innerHeight;
 
         if (newX <= 0 || newX + size >= maxX) {
@@ -36,16 +36,16 @@ const Sphere: React.FC<SphereProps> = ({ size, startX, startY, speedX, speedY })
       });
     };
 
-    const updateHue = () => {
+    /* const updateHue = () => {
       setHue((prevHue) => (prevHue + 1) % 360);
-    };
+    }; */
 
     const positionInterval = setInterval(updatePosition, 16);
-    const hueInterval = setInterval(updateHue, 100); // Slower hue change
+    //const hueInterval = setInterval(updateHue, 100); // Slower hue change
 
     return () => {
       clearInterval(positionInterval);
-      clearInterval(hueInterval);
+      //clearInterval(hueInterval);
     };
   }, [velocity, size]);
 

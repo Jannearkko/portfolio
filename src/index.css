@@ -19,4 +19,23 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+/* Works on Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(0,0,255,0.555) #2d3748;
+}
 
+/* Works on Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 4px;
+}
+
+*::-webkit-scrollbar-track {
+  background: #2d3748;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: rgba(0,0,255,0.555);
+  border-radius: 20px;
+  border: 3px solid orange;
+}
