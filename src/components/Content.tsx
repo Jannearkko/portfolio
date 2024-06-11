@@ -32,6 +32,7 @@ const Content: React.FC<{ onSectionChange: (id: string) => void }> = ({ onSectio
     });
 
     return () => {
+      /* eslint-disable-next-line no-unused-vars */
       sectionRefs.current.forEach((ref) => {
         if (ref) observer.unobserve(ref);
       });

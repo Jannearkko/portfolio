@@ -5,6 +5,7 @@ import ProfilePicture from '../images/omakuva.jpg';
 import DownloadForOfflineOutlinedIcon from '@mui/icons-material/DownloadForOfflineOutlined';
 
 const Sidebar: React.FC<{ activeSection: string }> = ({ activeSection }) => {
+  /* eslint-disable-next-line no-unused-vars */
   const [isHovered, setIsHovered] = useState(false);
 
   const sections = [
