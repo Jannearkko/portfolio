@@ -4,13 +4,14 @@ import Home from './Home';
 import About from './About';
 import Resume from './Resume';
 import Portfolio from './Portfolio';
+import Contact from './Contact';
 
 const sections = [
   { id: 'home', content: <Home /> },
   { id: 'about', content: <About /> },
   { id: 'resume', content: <Resume /> },
   { id: 'portfolio', content: <Portfolio /> },
-  { id: 'contact', title: 'Contact', content: 'This is the Contact section.' },
+  { id: 'contact', content: <Contact /> },
 ];
 
 const Content: React.FC<{ onSectionChange: (id: string) => void }> = ({ onSectionChange }) => {
@@ -50,7 +51,6 @@ const Content: React.FC<{ onSectionChange: (id: string) => void }> = ({ onSectio
           key={section.id}
           className="section-spacing"
         >
-          <h2 className="text-2xl font-bold mb-2">{section.title}</h2>
           <p>{section.content}</p>
         </section>
       ))}

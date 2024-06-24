@@ -27,11 +27,13 @@ const experienceData = [
 
 const codingSkills = [
   { skill: 'HTML, CSS', percentage: 82 },
-  { skill: 'JavaScript', percentage: 87 },
+  { skill: 'TypeScript', percentage: 87 },
   { skill: 'React', percentage: 87 },
   { skill: 'Node.js', percentage: 85 },
   { skill: 'Python', percentage: 91 },
-  { skill: 'ML', percentage: 83 }
+  { skill: 'ML', percentage: 83 },
+  { skill: 'C#', percentage: 69 },
+  { skill: 'C++', percentage: 56 }
 ];
 
 const designSkills = [
@@ -79,7 +81,7 @@ const Resume: React.FC = () => {
                   <p className="text-gray-400">{item.points}</p>
                   <p className="text-gray-400">{item.gpa}</p>
                   <p className="text-gray-400">{item.description}</p>
-                  <p className="text-gray-400">{item.completed}</p>
+                  <p className="text-gray-300 font-bold">{item.completed}</p>
                 </div>
               ))}
             </div>

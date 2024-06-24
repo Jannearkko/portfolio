@@ -14,6 +14,12 @@ import AIappImage5 from '../images/routes.png';
 import AIappImage6 from '../images/palvelin_toiminta.png';
 import AIappImage7 from '../images/tietokanta.png';
 
+import WAppImage1 from '../images/weather_app_1.png';
+import WAppImage2 from '../images/weather_app_2.png';
+
+import Ue1 from '../images/ue5_1.png';
+import Ue2 from '../images/ue5_2.png';
+
 const portfolioItems = [
   {
     title: 'Notification of Lighting a Fire - Application',
@@ -41,7 +47,29 @@ const portfolioItems = [
     databases: 'MongoDB',
     images: [AIappImage1, AIappImage2, AIappImage3, AIappImage4, AIappImage5, AIappImage6, AIappImage7],
   },
-  // Add more portfolio items as needed
+  {
+    title: 'Weather Application using Raspberry Pi',
+    type: 'SOFTWARE',
+    description: `This was a fun project to play around with Raspberry Pi and RuuviTag -sensor.\n
+    The project revolved around RuuviTag dumbing sensor readings to a database using bluetooth and the application read the database in real-time and visualized it to the client.\n
+    The application was running in my local network and I used my tablet and phone to check the weather using the app. Which was quite neat!`,
+    technologies: 'JavaScript, Bash, Node.js, Raspberry Pi, RuuviTag, HTML, CSS',
+    skills: 'Bash Scripting, Frontend Development, Backend Development, API Integration, Real-time Data-Handling and Visualization, Plotting',
+    databases: 'InfluxDB',
+    images: [WAppImage1, WAppImage2],
+  },
+  {
+    title: 'Unreal Engine 5 demo',
+    type: 'GRAPHICS',
+    description: `I really wish to learn UE5, so in my free-time I try to progress with this scenery.\n
+    My goals is so create a very simple Hack & Slash-type of game.\n
+    The map layout is made using Gaea.`,
+    technologies: 'UE5, Gaea, C++',
+    skills: '3D Graphics',
+    databases: '-',
+    images: [Ue1, Ue2],
+  },
+
 ];
 
 const Portfolio: React.FC = () => {
@@ -61,7 +89,7 @@ const Portfolio: React.FC = () => {
     return (
       <section id="portfolio" className="p-8 text-white">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl font-bold mb-8 flex items-center">
+          <h2 className="text-5xl font-bold mb-8 flex items-center">
             Portfolio.
             <div className="flex-grow h-px bg-gray-500 ml-4"></div>
           </h2>
