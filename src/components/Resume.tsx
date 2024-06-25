@@ -26,27 +26,33 @@ const experienceData = [
 ];
 
 const codingSkills = [
-  { skill: 'HTML, CSS', percentage: 82 },
+
   { skill: 'TypeScript', percentage: 87 },
   { skill: 'React', percentage: 87 },
   { skill: 'Node.js', percentage: 85 },
   { skill: 'Python', percentage: 91 },
+  { skill: 'REST API', percentage: 88 },
   { skill: 'ML', percentage: 83 },
   { skill: 'C#', percentage: 69 },
-  { skill: 'C++', percentage: 56 }
+  { skill: 'C++', percentage: 56 },
+  { skill: 'OOP', percentage: 79 },
+  { skill: 'HTML, CSS', percentage: 82 },
+
 ];
 
 const designSkills = [
   { skill: 'Figma', percentage: 39 },
   { skill: 'Gaea', percentage: 18 },
-  { skill: 'UE5', percentage: 20 }
+  { skill: 'UE5', percentage: 20 },
+  { skill: 'Mockups', percentage: 62 },
 ];
 
 const softSkills = [
     { skill: 'Communication', percentage: 90 },
     { skill: 'Teamwork', percentage: 85 },
     { skill: 'Problem Solving', percentage: 95 },
-    { skill: 'Time Management', percentage: 92 }
+    { skill: 'Time Management', percentage: 92 },
+    { skill: 'Self-driven', percentage: 99 },
 ];
 const certificates = [
   { certificate: 'EITCA/GCML', id: 'EITC/AI/GCML/SLJ24004528', type: 'EITC The European Information Technologies Certification Programme', programme:'EITC/AI/GCML Google Cloud Machine Learning', issued: 'April 2024', validateAddress: 'https://www.eitci.org/validate' },
@@ -127,7 +133,7 @@ const Resume: React.FC = () => {
               <h2 className="text-3xl font-bold mb-4">Design Skills.</h2>
               <div className="flex space-x-4 overflow-x-auto">
                 {designSkills.map((skill, index) => (
-                  <div key={index} className="w-24 h-24 flex flex-col items-center">
+                  <div key={index} className="w-20 h-24 flex flex-col items-center">
                     <CircularProgressbar
                       value={skill.percentage}
                       text={`${skill.percentage}%`}
@@ -142,9 +148,9 @@ const Resume: React.FC = () => {
                 ))}
               </div>
             </div>
-            <div>
+            <div className='-ml-20'>
               <h2 className="text-3xl font-bold mb-4">Soft Skills.</h2>
-              <div className="flex space-x-4">
+              <div className="flex space-x-5">
                 {softSkills.map((skill, index) => (
                   <div key={index} className="w-24 h-24 flex flex-col items-center">
                     <CircularProgressbar

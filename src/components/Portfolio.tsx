@@ -20,18 +20,48 @@ import WAppImage2 from '../images/weather_app_2.png';
 import Ue1 from '../images/ue5_1.png';
 import Ue2 from '../images/ue5_2.png';
 
+import docu1 from '../images/docuwash_1.png';
+import docu2 from '../images/docuwash_2.png';
+import docu3 from '../images/docuwash_3.png';
+import docu4 from '../images/docuwash_4.png';
+
+import { FaFire } from 'react-icons/fa';
+
 const portfolioItems = [
   {
-    title: 'Notification of Lighting a Fire - Application',
+    title: 'Rendering the Notifications of Lighting a Fire',
     type: 'SOFTWARE',
     description: `This is a browser-based application for rendering Notifications of Lighting a Fire. 
     These notifications are required by Finnish law when there is an increased risk of fire spreading.\n
     The application helps oversee planned, ongoing, and completed burning events and assists in locating and coordinating rescue personnel to the incident site.\n
-    The application is used in the fire department's command center, where all notifications are sent by the Finnish Ministry of Internal Affairs.`,
+    The application is used in the fire department's command center, where all notifications are sent by the Finnish Ministry of Internal Affairs.\n
+    I developed this app in three weeks including thorough testing. It's not beautiful, but it's simple, functional and much needed.`,
     technologies: 'Python, Flask, JavaScript, HTML, CSS, Node.js',
     skills: 'Frontend Development, Backend Development, API Integration, Real-time Data Handling',
     databases: 'Sqlite3',
     images: [TulentekoappImage1, TulentekoappImage2, TulentekoappImage3, TulentekoappImage4],
+    icon: <FaFire className='text-orange-500' />,
+  },
+  {
+    title: 'Document Washer',
+    type: 'API',
+    description: `My friend and I began building an API for washing different documents.\n
+    Especially PDF-files can be infested with scripts and other unwanted metadata that can cause serious harm
+    to the target infrastructure and network.\n
+    Big corporations and companies receive hundreds and thousands of different documents through
+    unsecure systems like email, resulting in a possible path for attacks by attaching scripts
+    to these documents.\n
+    The functionality of the API is to open the document in a secure sandbox-environment and
+    either wash the file's metadata and return the file or take a picture of the file and 
+    convert it back to the original format. Thus, destroying the original document in the process.\n
+    The project is still in it's early stage so there has been no integration yet. \n
+    PDF and DOCX-formats are already supported and testing is underway.
+    The images in the gallery present the actions within the PDF conversion route.`,
+    technologies: 'Python, FastAPI, Docker, CI/CD',
+    skills: 'API Development and Integration, Backend Development, Dockerization',
+    databases: '-',
+    images: [docu1, docu2, docu3, docu4],
+    icon: '',
   },
   {
     title: 'AI Sentiment Analysis - Application',
@@ -46,6 +76,7 @@ const portfolioItems = [
     skills: 'Machine Learning, Frontend Development, Backend Development, API Integration, Real-time Predictions and Data Handling',
     databases: 'MongoDB',
     images: [AIappImage1, AIappImage2, AIappImage3, AIappImage4, AIappImage5, AIappImage6, AIappImage7],
+    icon: "",
   },
   {
     title: 'Weather Application using Raspberry Pi',
@@ -57,6 +88,7 @@ const portfolioItems = [
     skills: 'Bash Scripting, Frontend Development, Backend Development, API Integration, Real-time Data-Handling and Visualization, Plotting',
     databases: 'InfluxDB',
     images: [WAppImage1, WAppImage2],
+    icon: '',
   },
   {
     title: 'Unreal Engine 5 demo',
@@ -68,6 +100,7 @@ const portfolioItems = [
     skills: '3D Graphics',
     databases: '-',
     images: [Ue1, Ue2],
+    icon: '',
   },
 
 ];
@@ -93,6 +126,7 @@ const Portfolio: React.FC = () => {
             Portfolio.
             <div className="flex-grow h-px bg-gray-500 ml-4 mt-8"></div>
           </h2>
+          <p className='italic text-gray-400 mb-4 flex items-center mb-5'>* Projects part of my current employment are marked with <FaFire className='ml-2 text-orange-500'/></p>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {portfolioItems.map((item, index) => (
               <div
@@ -107,7 +141,7 @@ const Portfolio: React.FC = () => {
                 />
                 <div className="p-4">
                   <h3 className="text-xl font-bold mb-2">{item.title}</h3>
-                  <p className="text-gray-400">{item.type.split(' ').slice(0, 5).join(' ')}</p>
+                  <p className="text-gray-400 flex items-center justify-between">{item.type.split(' ').slice(0, 5).join(' ')} {item.icon}</p>
                 </div>
               </div>
             ))}

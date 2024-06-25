@@ -1,5 +1,6 @@
 // src/components/Timeline.tsx
 import React from 'react';
+import { FaStar } from "react-icons/fa";
 
 interface TimelineItem {
   year: number;
@@ -24,10 +25,10 @@ const Timeline: React.FC<TimelineProps> = ({ items, startYear, endYear }) => {
           return (
             <div
               key={index}
-              className="absolute flex flex-col items-center -mt-2"
+              className="absolute flex flex-col items-center -mt-3"
               style={{ left: `${position}%`, transform: 'translateX(-50%)' }}
             >
-              <div className="w-5 h-5 bg-blue-500 rounded-full mb-2 relative" style={{ top: '-50%' }}></div>
+              <FaStar className="w-8 h-8 text-yellow-500 mb-2 relative" style={{ top: '-50%' }}/>
               <div className="text-center mt-2">
                 <div className="font-bold">{item.title}</div>
                 <div className="text-sm">{item.year}</div>

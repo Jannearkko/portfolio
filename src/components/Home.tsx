@@ -18,7 +18,7 @@ const Home: React.FC = () => {
         <h1 className="text-4xl md:text-6xl font-bold mb-4">Janne Arkko</h1>
         <h2 className="text-2xl md:text-4xl mb-4 text-gray-300">System Specialist @ Hyvaks</h2>
         <h2 className="text-xl md:text-2xl mb-4 text-gray-300">ICT Engineering student @ JAMK</h2>
-        <h2 className="text-xl md:text-2xl text-gray-400 mb-4">Creating new software & enhancing old systems to meet the standards of modern IT</h2>
+        <h2 className="text-xl md:text-2xl text-gray-400 mb-4">Creating new software & enhancing old systems to meet the standards of modern IT at the Rescue Department of Central Finland!</h2>
 
         <p className="text-lg md:text-xl text-gray-400 mb-6">
           In this website, I will showcase my work and the most notable projects I have been involved with in recent years. My thesis is currently in progress, and I expect to graduate in the fall of 2024.

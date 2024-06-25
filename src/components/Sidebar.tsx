@@ -27,8 +27,8 @@ const Sidebar: React.FC<{ activeSection: string }> = ({ activeSection }) => {
         <h1 className="text-xl font-bold">Janne Arkko</h1>
 
         <p className="text-gray-400">System Specialist</p>
-        <p className="text-gray-400">Keski-suomen Hyvinvointialue</p>
-        <p className="text-gray-400">Keski-suomen Pelastuslaitos</p>
+        <p className="text-gray-400 text-center">Wellbeing Services County of Central Finland</p>
+        <p className="text-gray-400 text-center">Rescue Department of Central Finland</p>
 
         <div className="flex space-x-4 my-4">
           <a href="https://www.linkedin.com/in/jannearkko/" className="text-white hover:text-gray-400" target='_blank' rel='noopener noreferrer'>
