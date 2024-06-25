@@ -60,7 +60,7 @@ const portfolioItems = [
   },
   {
     title: 'Unreal Engine 5 demo',
-    type: 'GRAPHICS',
+    type: 'GAME DEVELOPMENT',
     description: `I really wish to learn UE5, so in my free-time I try to progress with this scenery.\n
     My goals is so create a very simple Hack & Slash-type of game.\n
     The map layout is made using Gaea.`,
@@ -91,7 +91,7 @@ const Portfolio: React.FC = () => {
         <div className="max-w-6xl mx-auto">
           <h2 className="text-5xl font-bold mb-8 flex items-center">
             Portfolio.
-            <div className="flex-grow h-px bg-gray-500 ml-4"></div>
+            <div className="flex-grow h-px bg-gray-500 ml-4 mt-8"></div>
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {portfolioItems.map((item, index) => (

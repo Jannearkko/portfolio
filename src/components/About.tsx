@@ -28,7 +28,7 @@ const About: React.FC = () => {
       <div className="max-w-4xl mx-auto">
         <div ref={headingRef} className="flex items-center mb-8">
           <h1 className="text-4xl md:text-5xl font-bold text-left">About Me.</h1>
-          <div className="flex-grow h-px bg-gray-500 ml-4 mt-10"></div>
+          <div className="flex-grow h-px bg-gray-500 ml-4 mt-8"></div>
         </div>
 
         <div ref={bioRef} className="mb-8">
@@ -56,7 +56,7 @@ const About: React.FC = () => {
             <div className="grid grid-cols-[150px_50px_auto] mb-4">
               <span className="font-bold">Phone</span>
               <span className='text-white'>:</span>
-              <span className="text-white">(+358) 40 5655 290</span>
+              <span className="text-white">(+358) 040 5655 290</span>
             </div>
             <div className="grid grid-cols-[150px_50px_auto] mb-4">
               <span className="font-bold">Email</span>
@@ -74,11 +74,6 @@ const About: React.FC = () => {
               <span className="text-white">15 years</span>
             </div>
             <div className="grid grid-cols-[150px_50px_auto] mb-4">
-              <span className="font-bold">Freelance</span>
-              <span className='text-white'>:</span>
-              <span className="text-white">Negotiable</span>
-            </div>
-            <div className="grid grid-cols-[150px_50px_auto] mb-4">
               <span className="font-bold">Language</span>
               <span className='text-white'>:</span>
               <span className="text-white">Finnish & English</span>
@@ -92,7 +87,7 @@ const About: React.FC = () => {
         </div>
         <div ref={headingRef} className="flex items-center mb-8 mt-8">
           <h1 className="text-2xl md:text-4xl font-bold text-left">Career Chronicle.</h1>
-          <div className="flex-grow h-px bg-gray-500 ml-4 mt-10"></div>
+          <div className="flex-grow h-px bg-gray-500 ml-4 mt-6"></div>
         </div>
         <div ref={bioRef} className="mb-8">
         <Timeline items={careerTimeline} startYear={2011} endYear={2025} />

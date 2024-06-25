@@ -21,7 +21,7 @@ const Home: React.FC = () => {
         <h2 className="text-xl md:text-2xl text-gray-400 mb-4">Creating new software & enhancing old systems to meet the standards of modern IT</h2>
 
         <p className="text-lg md:text-xl text-gray-400 mb-6">
-          In this website, I will showcase my work and the projects I have been involved with in recent years. My thesis is currently in progress, and I expect to graduate in the fall of 2024.
+          In this website, I will showcase my work and the most notable projects I have been involved with in recent years. My thesis is currently in progress, and I expect to graduate in the fall of 2024.
         </p>
 
         <h1 className="text-xl md:text-2xl font-bold mb-4 text-gray-300 mt-4">Key Skills</h1>
@@ -31,7 +31,7 @@ const Home: React.FC = () => {
           <li>TypeScript & React</li>
           <li>Data Analysis & Visualization</li>
           <li>Certificates for Google Cloud Computing</li>
-          <li>DevOps & CI/CD</li>
+          <li>CI/CD with GitHub</li>
         </ul>
 
         <div className="flex space-x-4 mt-10">

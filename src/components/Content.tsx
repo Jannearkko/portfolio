@@ -5,6 +5,7 @@ import About from './About';
 import Resume from './Resume';
 import Portfolio from './Portfolio';
 import Contact from './Contact';
+import { FaReact } from 'react-icons/fa';
 
 const sections = [
   { id: 'home', content: <Home /> },
@@ -54,6 +55,12 @@ const Content: React.FC<{ onSectionChange: (id: string) => void }> = ({ onSectio
           <p>{section.content}</p>
         </section>
       ))}
+      <div className="flex justify-between items-center mt-4 text-gray-400">
+        <p>© 2024 Janne Arkko</p>
+        <p className="flex items-center">
+          Powered by React <FaReact className="ml-2 text-blue-500" />
+        </p>
+      </div>
     </main>
   );
 };

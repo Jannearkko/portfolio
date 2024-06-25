@@ -49,7 +49,7 @@ const Contact: React.FC = () => {
       <div className="max-w-6xl mx-auto">
         <h2 className="text-5xl font-bold mb-4 flex items-center mb-10">
           Get In Touch.
-          <div className="flex-grow h-px bg-gray-500 ml-4"></div>
+          <div className="flex-grow h-px bg-gray-500 ml-4 mt-8"></div>
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
           <div className="flex items-center bg-gray-800 p-4 rounded-lg shadow-lg">
