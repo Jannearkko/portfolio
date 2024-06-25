@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/portfolio/static/css/main.8033c209.css",
-    "main.js": "/portfolio/static/js/main.e676e6bd.js",
+    "main.css": "/portfolio/static/css/main.52c2c7b9.css",
+    "main.js": "/portfolio/static/js/main.1b879f3a.js",
     "static/js/453.ace21015.chunk.js": "/portfolio/static/js/453.ace21015.chunk.js",
     "static/media/tulentekoapp.png": "/portfolio/static/media/tulentekoapp.6dede777a6e9c64a3418.png",
     "static/media/ue5_1.png": "/portfolio/static/media/ue5_1.b6291c255aec795795c1.png",
@@ -20,12 +20,12 @@
     "static/media/tietokanta.png": "/portfolio/static/media/tietokanta.eab872af96bc0ff1a2bd.png",
     "static/media/UI_login.png": "/portfolio/static/media/UI_login.78bace9c707672bf216f.png",
     "index.html": "/portfolio/index.html",
-    "main.8033c209.css.map": "/portfolio/static/css/main.8033c209.css.map",
-    "main.e676e6bd.js.map": "/portfolio/static/js/main.e676e6bd.js.map",
+    "main.52c2c7b9.css.map": "/portfolio/static/css/main.52c2c7b9.css.map",
+    "main.1b879f3a.js.map": "/portfolio/static/js/main.1b879f3a.js.map",
     "453.ace21015.chunk.js.map": "/portfolio/static/js/453.ace21015.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.8033c209.css",
-    "static/js/main.e676e6bd.js"
+    "static/css/main.52c2c7b9.css",
+    "static/js/main.1b879f3a.js"
   ]
 }
