@@ -39,7 +39,7 @@ const MatrixBackground: React.FC = () => {
                     ctx.fillStyle = 'rgba(0, 0, 255, 0.555)'; // Regular blue
                     ctx.font = `${fontSize}px 'Noto Sans Egyptian Hieroglyphs'`;
                     if (Math.random() > 0.995) { // Small chance to become bright
-                        brightCharacters[i] = { duration: 20, fontSize: largerFontSize }; // Stay bright and larger for 20 frames
+                        brightCharacters[i] = { duration: 10, fontSize: largerFontSize }; // Stay bright and larger for 20 frames
                     }
                 }
 
@@ -61,5 +61,3 @@ const MatrixBackground: React.FC = () => {
 };
 
 export default MatrixBackground;
-
-

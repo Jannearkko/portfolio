@@ -17,7 +17,7 @@ const App: React.FC = () => {
     <div className="min-h-screen text-white flex justify-center items-center relative">
       <MatrixBackground />
       <Router>
-        <div className="w-full max-w-screen-xl flex bg-gradient-to-r from-gray-900 to-gray-700 content-wrapper relative z-10">
+        <div className="w-full max-w-screen-xl flex content-wrapper relative z-10">
           <Sidebar activeSection={activeSection}/>
           <Content onSectionChange={handleSectionChange}/>
         </div>

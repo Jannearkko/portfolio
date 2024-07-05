@@ -27,7 +27,6 @@ const Sidebar: React.FC<{ activeSection: string }> = ({ activeSection }) => {
         <h1 className="text-xl font-bold">Janne Arkko</h1>
 
         <p className="text-gray-400">System Specialist</p>
-        <p className="text-gray-400 text-center">Wellbeing Services County of Central Finland</p>
         <p className="text-gray-400 text-center">Rescue Department of Central Finland</p>
 
         <div className="flex space-x-4 my-4">
@@ -51,11 +50,13 @@ const Sidebar: React.FC<{ activeSection: string }> = ({ activeSection }) => {
         </nav>
       </div>
       <div className="w-full flex justify-center mb-4">
+      <a href="/cv_janne_arkko_2024.pdf" download>
+        
       <button
         className="border-2 text-white py-2 px-4 rounded-full flex items-center justify-between relative overflow-hidden hover:bg-customBlue transition-colors duration-300"
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
-        style={{ height: '50px' }} // Ensure consistent height
+        style={{ height: '50px' }}
       >
         {/* Icon on the left */}
         <DownloadForOfflineOutlinedIcon className="text-white mr-4" fontSize="large" />
@@ -65,7 +66,7 @@ const Sidebar: React.FC<{ activeSection: string }> = ({ activeSection }) => {
           Download CV
         </span>
       </button>
-
+      </a>
       </div>
     </aside>
   );
