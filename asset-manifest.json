@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/portfolio/static/css/main.cb76b824.css",
-    "main.js": "/portfolio/static/js/main.1266d095.js",
+    "main.js": "/portfolio/static/js/main.88b1c000.js",
     "static/js/453.ace21015.chunk.js": "/portfolio/static/js/453.ace21015.chunk.js",
     "static/media/tulentekoapp.png": "/portfolio/static/media/tulentekoapp.6dede777a6e9c64a3418.png",
     "static/media/ue5_1.png": "/portfolio/static/media/ue5_1.b6291c255aec795795c1.png",
@@ -13,23 +13,32 @@
     "static/media/docuwash_4.png": "/portfolio/static/media/docuwash_4.e2231182b683c259268e.png",
     "static/media/tulentekoapp_3.png": "/portfolio/static/media/tulentekoapp_3.4a2af6556649e640fd32.png",
     "static/media/weather_app_1.png": "/portfolio/static/media/weather_app_1.453161b2f81484bb5a43.png",
+    "static/media/firefit1.png": "/portfolio/static/media/firefit1.8402b5bb8992fbb47e1b.png",
     "static/media/palvelin_toiminta.png": "/portfolio/static/media/palvelin_toiminta.b2a459575886f20487a1.png",
+    "static/media/firefit3.png": "/portfolio/static/media/firefit3.7af0e90f774f8b998bfc.png",
+    "static/media/firefit2.png": "/portfolio/static/media/firefit2.5338b0ad16c2c7c536b5.png",
     "static/media/rakenne.png": "/portfolio/static/media/rakenne.9ab2c4edf37bcfdddd05.png",
+    "static/media/firefit6.png": "/portfolio/static/media/firefit6.f0123becd83edbe3eb26.png",
     "static/media/skeleton.png": "/portfolio/static/media/skeleton.d3f8e68530aa50a4f6cc.png",
+    "static/media/firefit5.png": "/portfolio/static/media/firefit5.c70135203d675f6b550e.png",
+    "static/media/firefit8.png": "/portfolio/static/media/firefit8.55a1df2c2c244a00b1ba.png",
     "static/media/docuwash_3.png": "/portfolio/static/media/docuwash_3.c26e4e422f73e8e4a29d.png",
     "static/media/docuwash_2.png": "/portfolio/static/media/docuwash_2.1f4051cd03039a55b6ab.png",
+    "static/media/firefit9.png": "/portfolio/static/media/firefit9.e080ae3b3d41fb946de6.png",
     "static/media/routes.png": "/portfolio/static/media/routes.7df235329b20361baefc.png",
     "static/media/docuwash_1.png": "/portfolio/static/media/docuwash_1.5bd2d442aa4b5ff91f73.png",
     "static/media/UI_logged_in.png": "/portfolio/static/media/UI_logged_in.0325159891d3f9f6ca2a.png",
+    "static/media/firefit4.png": "/portfolio/static/media/firefit4.9a73a1e9870888fa94c6.png",
+    "static/media/firefit7.png": "/portfolio/static/media/firefit7.0175534c8bf0c153111d.png",
     "static/media/tietokanta.png": "/portfolio/static/media/tietokanta.eab872af96bc0ff1a2bd.png",
     "static/media/UI_login.png": "/portfolio/static/media/UI_login.78bace9c707672bf216f.png",
     "index.html": "/portfolio/index.html",
     "main.cb76b824.css.map": "/portfolio/static/css/main.cb76b824.css.map",
-    "main.1266d095.js.map": "/portfolio/static/js/main.1266d095.js.map",
+    "main.88b1c000.js.map": "/portfolio/static/js/main.88b1c000.js.map",
     "453.ace21015.chunk.js.map": "/portfolio/static/js/453.ace21015.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.cb76b824.css",
-    "static/js/main.1266d095.js"
+    "static/js/main.88b1c000.js"
   ]
 }
