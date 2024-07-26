@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/portfolio/static/css/main.cb76b824.css",
-    "main.js": "/portfolio/static/js/main.88b1c000.js",
+    "main.js": "/portfolio/static/js/main.22e238fa.js",
     "static/js/453.ace21015.chunk.js": "/portfolio/static/js/453.ace21015.chunk.js",
     "static/media/tulentekoapp.png": "/portfolio/static/media/tulentekoapp.6dede777a6e9c64a3418.png",
     "static/media/ue5_1.png": "/portfolio/static/media/ue5_1.b6291c255aec795795c1.png",
@@ -34,11 +34,11 @@
     "static/media/UI_login.png": "/portfolio/static/media/UI_login.78bace9c707672bf216f.png",
     "index.html": "/portfolio/index.html",
     "main.cb76b824.css.map": "/portfolio/static/css/main.cb76b824.css.map",
-    "main.88b1c000.js.map": "/portfolio/static/js/main.88b1c000.js.map",
+    "main.22e238fa.js.map": "/portfolio/static/js/main.22e238fa.js.map",
     "453.ace21015.chunk.js.map": "/portfolio/static/js/453.ace21015.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.cb76b824.css",
-    "static/js/main.88b1c000.js"
+    "static/js/main.22e238fa.js"
   ]
 }
