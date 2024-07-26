@@ -25,9 +25,44 @@ import docu2 from '../images/docuwash_2.png';
 import docu3 from '../images/docuwash_3.png';
 import docu4 from '../images/docuwash_4.png';
 
+import f1 from '../images/firefit1.png';
+import f2 from '../images/firefit2.png';
+import f3 from '../images/firefit3.png';
+import f4 from '../images/firefit4.png';
+import f5 from '../images/firefit5.png';
+import f6 from '../images/firefit6.png';
+import f7 from '../images/firefit7.png';
+import f8 from '../images/firefit8.png';
+import f9 from '../images/firefit9.png';
+
 import { FaFire } from 'react-icons/fa';
 
 const portfolioItems = [
+  {
+    title: 'Firefit.kspela.fi - Fitness test booking and management application',
+    type: 'SOFTWARE',
+    description: `Comprehensive browser application to guide and assist the rescue personnel in scheduling, maintaining, and 
+    conducting annual fitness tests. The application features two distinct user interfaces tailored to specific user roles, 
+    ensuring optimal functionality and user experience. The application is hosted on the subdomain of kspela.fi.
+
+    The Administrator/Supervisor interface enables supervisors and administrators to manage and schedule work hours 
+    for each tester, thereby opening reservable time slots for testees to book fitness tests. It also allows them to oversee 
+    personnel and their records and view detailed and insightful statistics, such as utilization rates of booked tests 
+    against available time slots, making future scheduling more thoughtful and robust.
+
+    The User interface enables users to book fitness tests in the aforementioned time slots with a responsive design 
+    that restricts bookings to designated areas. Tests can only be booked in areas and fire stations where a tester has 
+    been assigned by the supervisor, ensuring a smooth and trusted reservation flow. From this interface, testers can 
+    take on tests assigned to them, mark them as approved, or schedule breaks, such as lunch breaks, preventing 
+    testees from booking tests during these times.
+    
+    *Note: This application is currently in development.*`,
+    technologies: 'TypeScript, React, CSS, Node.js',
+    skills: 'Full-Stack Development, API Integration, SQL-database, Domain Integration',
+    databases: 'MariaDB',
+    images: [f1, f2, f3, f4, f5, f6, f7, f8, f9],
+    icon: <FaFire className='text-orange-500' />,
+  },
   {
     title: 'Rendering the Notifications of Lighting a Fire',
     type: 'SOFTWARE',
