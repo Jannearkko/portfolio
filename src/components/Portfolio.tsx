@@ -57,7 +57,7 @@ const portfolioItems = [
     testees from booking tests during these times.
     
     *Note: This application is currently in development.*`,
-    technologies: 'TypeScript, React, CSS, Node.js',
+    technologies: 'TypeScript, React, CSS, Node.js, @MUI',
     skills: 'Full-Stack Development, API Integration, SQL-database, Domain Integration',
     databases: 'MariaDB',
     images: [f1, f2, f3, f4, f5, f6, f7, f8, f9],
