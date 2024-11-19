@@ -20,10 +20,10 @@ import WAppImage2 from '../images/weather_app_2.png';
 import Ue1 from '../images/ue5_1.png';
 import Ue2 from '../images/ue5_2.png';
 
-import docu1 from '../images/docuwash_1.png';
+/* import docu1 from '../images/docuwash_1.png';
 import docu2 from '../images/docuwash_2.png';
 import docu3 from '../images/docuwash_3.png';
-import docu4 from '../images/docuwash_4.png';
+import docu4 from '../images/docuwash_4.png'; */
 
 import f1 from '../images/firefit1.png';
 import f2 from '../images/firefit2.png';
@@ -77,7 +77,7 @@ const portfolioItems = [
     images: [TulentekoappImage1, TulentekoappImage2, TulentekoappImage3, TulentekoappImage4],
     icon: <FaFire className='text-orange-500' />,
   },
-  {
+/*   {
     title: 'Document Washer',
     type: 'API',
     description: `My friend and I began building an API for washing different documents.\n
@@ -97,7 +97,7 @@ const portfolioItems = [
     databases: '-',
     images: [docu1, docu2, docu3, docu4],
     icon: '',
-  },
+  }, */
   {
     title: 'AI Sentiment Analysis - Application',
     type: 'ARTIFICIAL INTELLIGENCE',
