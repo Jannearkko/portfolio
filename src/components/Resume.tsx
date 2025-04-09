@@ -12,7 +12,7 @@ const educationData = [
     points: '240 ECTS',
     gpa: 'GPA 4.6/5',
     description: 'Advanced studies on software development and AI',
-    completed: 'Completed 86 %'
+    completed: 'Completed 100 %'
   },
 ];
 
@@ -20,23 +20,23 @@ const experienceData = [
   {
     position: 'System Specialist',
     company: 'Keski-suomen Hyvinvointialue | Keski-suomen pelastuslaitos',
-    years: '2024 - Current',
+    years: 'May 2024 - November 2024',
     description: 'Creating new software to aid in the daily work of the rescue personnel. Enhancing old software and providing expertise and support in all aspects of IT to administrative personnel.'
   },
 ];
 
 const codingSkills = [
 
-  { skill: 'TypeScript', percentage: 87 },
-  { skill: 'React', percentage: 87 },
-  { skill: 'Node.js', percentage: 85 },
-  { skill: 'Python', percentage: 91 },
-  { skill: 'REST API', percentage: 88 },
-  { skill: 'ML', percentage: 83 },
-  { skill: 'C#', percentage: 69 },
-  { skill: 'C++', percentage: 56 },
-  { skill: 'OOP', percentage: 79 },
-  { skill: 'HTML, CSS', percentage: 82 },
+  { skill: 'TypeScript', percentage: 98 },
+  { skill: 'React', percentage: 96 },
+  { skill: 'Node.js', percentage: 89 },
+  { skill: 'Python', percentage: 92 },
+  { skill: 'REST API', percentage: 94 },
+  { skill: 'ML', percentage: 79 },
+  { skill: 'C#', percentage: 55 },
+  { skill: 'C++', percentage: 43 },
+  { skill: 'OOP', percentage: 85 },
+  { skill: 'Spring Boot', percentage: 72 },
 
 ];
 

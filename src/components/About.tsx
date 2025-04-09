@@ -16,7 +16,7 @@ const About: React.FC = () => {
 
   const careerTimeline = [
     { year: 2012, title: 'Peacekeeper', description: 'UNIFIL III' },
-    { year: 2015, title: 'Firefighter', description: 'Firefighter from 2015-2024' },
+    { year: 2015, title: 'Firefighter', description: 'Firefighter from 2015-2025' },
     { year: 2018, title: 'Entrepreneur', description: 'Construction business' },
     { year: 2021, title: 'Student of ICT', description: 'JAMK' },
     { year: 2024, title: 'System Specialist', description: 'Software developer' },
@@ -35,7 +35,7 @@ const About: React.FC = () => {
           <p className="text-lg md:text-xl text-gray-300">
             Hi, my name is <span className="font-bold text-white">Janne Arkko</span>. 
             Over the past three years, I have been pursuing my Bachelor's degree, with a focus on programming and machine learning. 
-            I am on track to graduate in the <span className="font-bold text-white">fall of 2024</span>, and my academic journey has fueled a deep passion for various aspects of technology. 
+            I graduated at November of 2024, and my academic journey has fueled a deep passion for various aspects of technology. 
             I am particularly interested in software development, machine learning, and the fascinating world of embedded IoT systems and robotics. 
             Additionally, I have a strong enthusiasm for games and the gaming industry, which serves as a hobby, allowing me to use part of my free time to learn game development basics.
           </p>

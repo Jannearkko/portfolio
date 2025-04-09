@@ -16,19 +16,20 @@ const Home: React.FC = () => {
     <section ref={homeRef} id="home" className="flex flex-col md:flex-row items-start justify-between p-8 h-screen">
       <div className="flex flex-col items-start">
         <h1 className="text-4xl md:text-6xl font-bold mb-4">Janne Arkko</h1>
-        <h2 className="text-2xl md:text-4xl mb-4 text-gray-300">System Specialist @ Hyvaks</h2>
-        <h2 className="text-xl md:text-2xl mb-4 text-gray-300">Bachelor of Engineering</h2>
-        <h2 className="text-xl md:text-2xl text-gray-400 mb-4">Creating new software & enhancing old systems to meet the standards of modern IT at the Rescue Department of Central Finland!</h2>
+        <h2 className="text-2xl md:text-4xl mb-4 text-gray-300">Firefighter</h2>
+        <h2 className="text-xl md:text-2xl mb-4 text-gray-300">Bachelor of IT</h2>
+        <h2 className="text-xl md:text-2xl text-gray-400 mb-4">Tech Enthusiast with a keen eye and understanding to UX. More of a backend guy, but both will do!</h2>
 
         <p className="text-lg md:text-xl text-gray-400 mb-6">
-          In this website, I will showcase my work and the most notable projects I have been involved with in recent years. My thesis is currently in progress, and I expect to graduate in the fall of 2024.
+          In this website, I will showcase my work and the most notable projects I have been involved with in recent years.
         </p>
 
         <h1 className="text-xl md:text-2xl font-bold mb-4 text-gray-300 mt-4">Key Skills</h1>
         <ul className="list-disc list-inside text-lg md:text-xl text-gray-400 mb-6">
-        <li>Self-driven Team Player</li>
-          <li>Python & Machine Learning</li>
+          <li>Self-driven Team Player</li>
+          <li>Java Spring Boot</li>
           <li>TypeScript & React</li>
+          <li>Python & Machine Learning</li>
           <li>Data Analysis & Visualization</li>
           <li>Certificates for Google Cloud Computing</li>
           <li>CI/CD with GitHub</li>

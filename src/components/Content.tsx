@@ -56,7 +56,7 @@ const Content: React.FC<{ onSectionChange: (id: string) => void }> = ({ onSectio
         </section>
       ))}
       <div className="flex justify-between items-center mt-4 text-gray-400">
-        <p>© 2024 Janne Arkko</p>
+        <p>© 2025 Janne Arkko</p>
         <p className="flex items-center">
           Powered by React <FaReact className="ml-2 text-blue-500" />
         </p>

@@ -26,7 +26,7 @@ const Sidebar: React.FC<{ activeSection: string }> = ({ activeSection }) => {
         />
         <h1 className="text-xl font-bold">Janne Arkko</h1>
 
-        <p className="text-gray-400">System Specialist</p>
+        <p className="text-gray-400">Firefighter, Tech/Game nerd</p>
         <p className="text-gray-400 text-center">Rescue Department of Central Finland</p>
 
         <div className="flex space-x-4 my-4">

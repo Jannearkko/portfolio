@@ -25,6 +25,8 @@ import docu2 from '../images/docuwash_2.png';
 import docu3 from '../images/docuwash_3.png';
 import docu4 from '../images/docuwash_4.png'; */
 
+import topsecret from '../images/topsecret.jpg';
+
 import f1 from '../images/firefit1.png';
 import f2 from '../images/firefit2.png';
 import f3 from '../images/firefit3.png';
@@ -37,7 +39,40 @@ import f9 from '../images/firefit9.png';
 
 import { FaFire } from 'react-icons/fa';
 
+import m1 from '../images/m1.jpg';
+import m2 from '../images/m2.jpg';
+import m3 from '../images/m3.jpg';
+import m4 from '../images/m4.jpg';
+import m5 from '../images/m5.jpg';
+import m6 from '../images/m6.jpg';
+
 const portfolioItems = [
+  {
+    title: 'Once Upon AI...',
+    type: 'MOBILE APP',
+    description: `My latest solo project: A mobile app to produce AI generated stories and possibly monetize it.\n
+    Stories are generated and read out loud by an external AI. UX has been the cornerstone of my development because...\n
+    backends are easy, UI/UX hard. The app is on development stage and will be published to Google Play and Apple Store with\n
+    OAuth-authentication applied to all major providers. \n
+    Tech stack includes Spring Boot backend with Docker, TypeScript React-Native frontend with Expo framework, Firebase file storage and\n
+    the app will be published to Cloud Run eventually.`,
+    technologies: 'TypeScript, Java Spring Boot, React-Native, Expo',
+    skills: 'Full-Stack Development, Mobile Development, AI, UI/UX, Monetization, API Integration, SQL',
+    databases: 'PostgreSQL, Firebase',
+    images: [m1, m2, m3, m4, m5, m6],
+    icon: '',
+  },
+  {
+    title: 'Cybersecurity API',
+    type: 'API',
+    description: `Four man development of an API for a fundamental flaw in cyber security. Enhancing the safety of personnel and organizations. \n
+    Roughly 24% of all cybersecurity incidents are caused by human error. This API would decrease that. Too bad we're on NDA...`,
+    technologies: 'Python, FastAPI, Docker, Spring Boot,CI/CD',
+    skills: 'API Development and Integration, Backend Development, Dockerization',
+    databases: 'PostgreSQL',
+    images: [topsecret],
+    icon: '',
+  },
   {
     title: 'Firefit.kspela.fi - Fitness test booking and management application',
     type: 'SOFTWARE',
@@ -77,27 +112,6 @@ const portfolioItems = [
     images: [TulentekoappImage1, TulentekoappImage2, TulentekoappImage3, TulentekoappImage4],
     icon: <FaFire className='text-orange-500' />,
   },
-/*   {
-    title: 'Document Washer',
-    type: 'API',
-    description: `My friend and I began building an API for washing different documents.\n
-    Especially PDF-files can be infested with scripts and other unwanted metadata that can cause serious harm
-    to the target infrastructure and network.\n
-    Big corporations and companies receive hundreds and thousands of different documents through
-    unsecure systems like email, resulting in a possible path for attacks by attaching scripts
-    to these documents.\n
-    The functionality of the API is to open the document in a secure sandbox-environment and
-    either wash the file's metadata and return the file or take a picture of the file and 
-    convert it back to the original format. Thus, destroying the original document in the process.\n
-    The project is still in it's early stage so there has been no integration yet. \n
-    PDF and DOCX-formats are already supported and testing is underway.
-    The images in the gallery present the actions within the PDF conversion route.`,
-    technologies: 'Python, FastAPI, Docker, CI/CD',
-    skills: 'API Development and Integration, Backend Development, Dockerization',
-    databases: '-',
-    images: [docu1, docu2, docu3, docu4],
-    icon: '',
-  }, */
   {
     title: 'AI Sentiment Analysis - Application',
     type: 'ARTIFICIAL INTELLIGENCE',
