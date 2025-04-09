@@ -51,11 +51,9 @@ const portfolioItems = [
     title: 'Once Upon AI...',
     type: 'MOBILE APP',
     description: `My latest solo project: A mobile app to produce AI generated stories and possibly monetize it.\n
-    Stories are generated and read out loud by an external AI. UX has been the cornerstone of my development because...\n
-    backends are easy, UI/UX hard. The app is on development stage and will be published to Google Play and Apple Store with\n
-    OAuth-authentication applied to all major providers. \n
-    Tech stack includes Spring Boot backend with Docker, TypeScript React-Native frontend with Expo framework, Firebase file storage and\n
-    the app will be published to Cloud Run eventually.`,
+    Stories are generated and read out loud by an external AI. UX has been the cornerstone of my development because... backends are easy, UI/UX hard. 
+    The app is on development stage and will be published to Google Play and Apple Store with OAuth-authentication applied to all major providers.\n
+    Tech stack includes Spring Boot backend with Docker, TypeScript React-Native frontend with Expo framework, Firebase file storage and the app will be published to Cloud Run eventually.`,
     technologies: 'TypeScript, Java Spring Boot, React-Native, Expo',
     skills: 'Full-Stack Development, Mobile Development, AI, UI/UX, Monetization, API Integration, SQL',
     databases: 'PostgreSQL, Firebase',
