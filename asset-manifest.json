@@ -1,15 +1,22 @@
 {
   "files": {
     "main.css": "/portfolio/static/css/main.cb76b824.css",
-    "main.js": "/portfolio/static/js/main.28299020.js",
+    "main.js": "/portfolio/static/js/main.f6f4c8c5.js",
     "static/js/453.ace21015.chunk.js": "/portfolio/static/js/453.ace21015.chunk.js",
     "static/media/tulentekoapp.png": "/portfolio/static/media/tulentekoapp.6dede777a6e9c64a3418.png",
     "static/media/ue5_1.png": "/portfolio/static/media/ue5_1.b6291c255aec795795c1.png",
     "static/media/ue5_2.png": "/portfolio/static/media/ue5_2.b04c84a7632c8c5d98ca.png",
+    "static/media/m4.jpg": "/portfolio/static/media/m4.144141f6a30ab792e300.jpg",
+    "static/media/m2.jpg": "/portfolio/static/media/m2.efe9fb0609849d46fb50.jpg",
     "static/media/omakuva.jpg": "/portfolio/static/media/omakuva.412ee1829f044cf198e9.jpg",
     "static/media/tulentekoapp_1.png": "/portfolio/static/media/tulentekoapp_1.2d39c721a1732c9ce67c.png",
+    "static/media/m1.jpg": "/portfolio/static/media/m1.b1316155f2a87795ae10.jpg",
+    "static/media/m3.jpg": "/portfolio/static/media/m3.8241738d3879cf6e2c4f.jpg",
+    "static/media/m5.jpg": "/portfolio/static/media/m5.cf6141ba980001f82648.jpg",
     "static/media/tulentekoapp_2.png": "/portfolio/static/media/tulentekoapp_2.a60820ac54c915d2890d.png",
+    "static/media/topsecret.jpg": "/portfolio/static/media/topsecret.8e033d3d64317b1e6e0d.jpg",
     "static/media/weather_app_2.png": "/portfolio/static/media/weather_app_2.db541d9ea8770465d65c.png",
+    "static/media/m6.jpg": "/portfolio/static/media/m6.edfd134c5cbd2d7bef66.jpg",
     "static/media/tulentekoapp_3.png": "/portfolio/static/media/tulentekoapp_3.4a2af6556649e640fd32.png",
     "static/media/weather_app_1.png": "/portfolio/static/media/weather_app_1.453161b2f81484bb5a43.png",
     "static/media/firefit1.png": "/portfolio/static/media/firefit1.8402b5bb8992fbb47e1b.png",
@@ -30,11 +37,11 @@
     "static/media/UI_login.png": "/portfolio/static/media/UI_login.78bace9c707672bf216f.png",
     "index.html": "/portfolio/index.html",
     "main.cb76b824.css.map": "/portfolio/static/css/main.cb76b824.css.map",
-    "main.28299020.js.map": "/portfolio/static/js/main.28299020.js.map",
+    "main.f6f4c8c5.js.map": "/portfolio/static/js/main.f6f4c8c5.js.map",
     "453.ace21015.chunk.js.map": "/portfolio/static/js/453.ace21015.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.cb76b824.css",
-    "static/js/main.28299020.js"
+    "static/js/main.f6f4c8c5.js"
   ]
 }
