@@ -50,7 +50,7 @@ const Sidebar: React.FC<{ activeSection: string }> = ({ activeSection }) => {
         </nav>
       </div>
       <div className="w-full flex justify-center mb-4">
-      <a href="/portfolio/cv_janne_arkko_2024.pdf" download>
+      <a href="/portfolio/cv_janne_arkko_2025_uusi.pdf" download>
         
       <button
         className="border-2 text-white py-2 px-4 rounded-full flex items-center justify-between relative overflow-hidden hover:bg-customBlue transition-colors duration-300"
