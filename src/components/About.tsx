@@ -1,6 +1,7 @@
 import React from 'react';
 import useIntersectionObserver from './UseIntersectionObserver';
 import Timeline from './Timeline';
+import SectionHeader from './SectionHeader';
 import 'animate.css';
 
 const About: React.FC = () => {
@@ -10,96 +11,65 @@ const About: React.FC = () => {
     threshold: 0.1,
   };
 
-  const headingRef = useIntersectionObserver(options);
   const bioRef = useIntersectionObserver(options);
   const infoRef = useIntersectionObserver(options);
 
   const careerTimeline = [
     { year: 2012, title: 'Peacekeeper', description: 'UNIFIL III' },
-    { year: 2015, title: 'Firefighter', description: 'Firefighter from 2015-2025' },
+    { year: 2015, title: 'Firefighter', description: 'Rescue services' },
     { year: 2018, title: 'Entrepreneur', description: 'Construction business' },
-    { year: 2021, title: 'Student of ICT', description: 'JAMK' },
-    { year: 2024, title: 'System Specialist', description: 'Software developer' },
+    { year: 2021, title: 'ICT Student', description: 'JAMK University of Applied Sciences' },
+    { year: 2024, title: 'System Specialist', description: 'Software development' },
+  ];
 
+  const infoRows = [
+    { label: 'Name', value: 'Janne Arkko' },
+    { label: 'Location', value: 'Finland' },
+    { label: 'Phone', value: '+358 40 565 5290' },
+    { label: 'Email', value: 'janne.arkko@outlook.com' },
+    { label: 'ICT experience', value: '3 years (including studies)' },
+    { label: 'Total work experience', value: '15 years' },
+    { label: 'Languages', value: 'Finnish & English' },
+    { label: 'Open to opportunities', value: 'Yes' },
   ];
 
   return (
-    <section id="about" className="p-8 text-white">
-      <div className="max-w-4xl mx-auto">
-        <div ref={headingRef} className="flex items-center mb-8">
-          <h1 className="text-4xl md:text-5xl font-bold text-left">About Me.</h1>
-          <div className="flex-grow h-px bg-gray-500 ml-4 mt-8"></div>
-        </div>
+    <div className="px-2 py-8 lg:px-4">
+      <div className="mx-auto max-w-4xl">
+        <SectionHeader
+          title="About Me"
+          subtitle="Background, experience, and career path"
+        />
 
-        <div ref={bioRef} className="mb-8">
-          <p className="text-lg md:text-xl text-gray-300">
-            Hi, my name is <span className="font-bold text-white">Janne Arkko</span>. 
-            Over the past three years, I have been pursuing my Bachelor's degree, with a focus on programming and machine learning. 
-            I graduated at November of 2024, and my academic journey has fueled a deep passion for various aspects of technology. 
-            I am particularly interested in software development, machine learning, and the fascinating world of embedded IoT systems and robotics. 
-            Additionally, I have a strong enthusiasm for games and the gaming industry, which serves as a hobby, allowing me to use part of my free time to learn game development basics.
+        <div ref={bioRef} className="mb-10">
+          <p className="text-lg leading-relaxed text-gray-300">
+            I am a software developer with a background in fire and rescue services.
+            I completed my Bachelor of IT at JAMK University of Applied Sciences in
+            November 2024, with a focus on software development and machine learning.
+          </p>
+          <p className="mt-4 text-lg leading-relaxed text-gray-300">
+            My interests include backend development, applied machine learning, and
+            embedded IoT systems. I also explore game development as a personal hobby
+            and a way to deepen my understanding of interactive software.
           </p>
         </div>
 
-        <div ref={infoRef} className="grid grid-cols-1 md:grid-cols-2 gap-8 text-lg md:text-xl text-gray-400">
-          <div>
-            <div className="grid grid-cols-[150px_50px_auto] mb-4">
-              <span className="font-bold">Name</span>
-              <span className='text-white'>:</span>
-              <span className="text-white">Janne Arkko</span>
-            </div>
-            <div className="grid grid-cols-[150px_50px_auto] mb-4">
-              <span className="font-bold">Nationality</span>
-              <span className='text-white'>:</span>
-              <span className="text-white">Finland</span>
-            </div>
-            <div className="grid grid-cols-[150px_50px_auto] mb-4">
-              <span className="font-bold">Phone</span>
-              <span className='text-white'>:</span>
-              <span className="text-white">(+358) 040 5655 290</span>
-            </div>
-            <div className="grid grid-cols-[150px_50px_auto] mb-4">
-              <span className="font-bold">Email</span>
-              <span className='text-white'>:</span>
-              <span className="text-white">janne.arkko@outlook.com</span>
-            </div>
-            <div className="grid grid-cols-[150px_50px_auto] mb-4">
-              <span className="font-bold">Experience in ICT</span>
-              <span className='text-white'>:</span>
-              <span className="text-white">3 years (including studies)</span>
-            </div>
-            <div className="grid grid-cols-[150px_50px_auto] mb-4">
-              <span className="font-bold">Total work experience</span>
-              <span className='text-white'>:</span>
-              <span className="text-white">15 years</span>
-            </div>
-            <div className="grid grid-cols-[150px_50px_auto] mb-4">
-              <span className="font-bold">Language</span>
-              <span className='text-white'>:</span>
-              <span className="text-white">Finnish & English</span>
-            </div>
-            <div className="grid grid-cols-[150px_50px_auto] mb-4">
-              <span className="font-bold">Open for new possibilities?</span>
-              <span className='text-white'>:</span>
-              <span className="text-white">Yes</span>
-            </div>
-          </div>
+        <div ref={infoRef} className="card mb-12">
+          <dl className="grid gap-4 sm:grid-cols-2">
+            {infoRows.map(({ label, value }) => (
+              <div key={label} className="flex flex-col gap-1 sm:flex-row sm:gap-3">
+                <dt className="min-w-[10rem] text-sm font-medium text-gray-500">{label}</dt>
+                <dd className="text-white">{value}</dd>
+              </div>
+            ))}
+          </dl>
         </div>
-        <div ref={headingRef} className="flex items-center mb-8 mt-8">
-          <h1 className="text-2xl md:text-4xl font-bold text-left">Career Chronicle.</h1>
-          <div className="flex-grow h-px bg-gray-500 ml-4 mt-6"></div>
-        </div>
-        <div ref={bioRef} className="mb-8">
+
+        <SectionHeader title="Career Timeline" />
         <Timeline items={careerTimeline} startYear={2011} endYear={2025} />
-            
-          
-        </div>
       </div>
-    </section>
+    </div>
   );
 };
 
 export default About;
-
-
-

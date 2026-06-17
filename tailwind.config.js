@@ -1,47 +1,30 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  purge: {
-    content: ['./src/**/*.{js,jsx,ts,tsx}', './public/index.html'],
-    options: {
-      safelist: [
-        // Add classes to safelist here
-        // Example: Safelist for dynamic background and hover classes for colors green and blue
-        'bg-green-600', 'hover:bg-green-700',
-        'bg-blue-600', 'hover:bg-blue-700',
-        'bg-red-600', 'hover:bg-red-700',
-        'bg-gray-600', 'hover:bg-gray-700',
-        'bg-customBlue', 'hover:bg-customBlue'
-        // Add more classes as needed
-      ],
-    },
-  },
-  darkMode: 'media', // or 'media' or 'class'
+  content: ['./src/**/*.{js,jsx,ts,tsx}', './public/index.html'],
   theme: {
     fontFamily: {
-      'body': ['"Open Sans"', 'sans-serif'],
-      'heading': ['"Merriweather"', 'serif'],
+      body: ['"Inter"', 'system-ui', 'sans-serif'],
+      heading: ['"Merriweather"', 'Georgia', 'serif'],
     },
     extend: {
-      width: {
-        '1080': '1080px'
-      },
       colors: {
-        customBlue: 'rgba(0,0,255,0.555)',
-      },
-      keyframes: {
-        spin: {
-          from: { transform: 'rotate(0deg)' },
-          to: { transform: 'rotate(360deg)' },
+        surface: {
+          950: '#08080c',
+          900: '#0f0f14',
+          800: '#16161f',
+          700: '#1f1f2b',
+          600: '#2a2a38',
+        },
+        accent: {
+          DEFAULT: '#3b82f6',
+          hover: '#2563eb',
+          muted: '#1e3a5f',
         },
       },
-      animation: {
-        'slow-spin': 'spin 3s linear infinite',
-      }
+      boxShadow: {
+        card: '0 4px 24px rgba(0, 0, 0, 0.4)',
+      },
     },
-  },
-  variants: {
-    extend: {},
   },
   plugins: [],
 };
-

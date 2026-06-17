@@ -1,6 +1,4 @@
-// src/components/Timeline.tsx
 import React from 'react';
-import { FaStar } from "react-icons/fa";
 
 interface TimelineItem {
   year: number;
@@ -18,44 +16,53 @@ const Timeline: React.FC<TimelineProps> = ({ items, startYear, endYear }) => {
   const totalYears = endYear - startYear;
 
   return (
-    <div className="relative flex flex-col items-center p-5 w-full">
-      <div className="relative w-full h-1 bg-gray-300 my-5">
-        {items.map((item, index) => {
-          const position = ((item.year - startYear) / totalYears) * 100;
-          return (
-            <div
-              key={index}
-              className="absolute flex flex-col items-center -mt-3"
-              style={{ left: `${position}%`, transform: 'translateX(-50%)' }}
-            >
-              <FaStar className="w-8 h-8 text-yellow-500 mb-2 relative" style={{ top: '-50%' }}/>
-              <div className="text-center mt-2">
-                <div className="font-bold">{item.title}</div>
-                <div className="text-sm">{item.year}</div>
-                <div className="text-xs">{item.description}</div>
+    <>
+      {/* Vertical timeline — mobile & tablet */}
+      <div className="relative pl-8 lg:hidden">
+        <div className="absolute bottom-2 left-[7px] top-2 w-0.5 bg-surface-600" aria-hidden="true" />
+        <ul className="space-y-8">
+          {items.map((item) => (
+            <li key={`${item.year}-${item.title}`} className="relative">
+              <span
+                className="absolute -left-8 top-1.5 h-3.5 w-3.5 rounded-full border-2 border-accent bg-surface-900"
+                aria-hidden="true"
+              />
+              <p className="text-sm font-semibold text-white">{item.title}</p>
+              <p className="text-xs text-gray-500">{item.year}</p>
+              <p className="mt-1 text-sm text-gray-400">{item.description}</p>
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      {/* Horizontal timeline — desktop */}
+      <div className="hidden lg:block">
+        <div className="relative px-6 pb-28 pt-4">
+          <div className="relative h-0.5 w-full bg-surface-600" aria-hidden="true" />
+          {items.map((item) => {
+            const position = ((item.year - startYear) / totalYears) * 100;
+            return (
+              <div
+                key={`${item.year}-${item.title}-horizontal`}
+                className="absolute top-4 flex w-28 -translate-x-1/2 flex-col items-center"
+                style={{ left: `${position}%` }}
+              >
+                <span
+                  className="mb-4 h-3.5 w-3.5 shrink-0 rounded-full border-2 border-accent bg-surface-900"
+                  aria-hidden="true"
+                />
+                <div className="text-center">
+                  <p className="text-sm font-semibold text-white">{item.title}</p>
+                  <p className="text-xs text-gray-500">{item.year}</p>
+                  <p className="mt-1 text-xs leading-snug text-gray-400">{item.description}</p>
+                </div>
               </div>
-            </div>
-          );
-        })}
-        <div className="absolute right-0 top-1/2 transform translate-x-1/2 -translate-y-1/2">
-          <svg
-            className="w-6 h-6 text-gray-300"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={4} d="M9 5l7 7-7 7" />
-          </svg>
+            );
+          })}
         </div>
       </div>
-    </div>
+    </>
   );
 };
 
 export default Timeline;
-
-
-
-
-

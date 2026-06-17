@@ -1,23 +1,15 @@
-.App {
-  text-align: center;
-}
-
-.sphere {
-  position: absolute;
-  border-radius: 50%;
-}
-
 .content-wrapper {
   position: relative;
   z-index: 10;
-  background: rgba(0, 0, 0, 0.8); /* Slight background to hide spheres behind */
   width: 100%;
   display: flex;
+  min-height: 100vh;
 }
+
 .section-spacing {
-  margin-bottom: 10rem;
+  margin-bottom: 8rem;
 }
 
-
-
-
+.section-spacing:last-of-type {
+  margin-bottom: 4rem;
+}

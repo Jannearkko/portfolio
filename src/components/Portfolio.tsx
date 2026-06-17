@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import Modal from './Modal';
+import SectionHeader from './SectionHeader';
 
 import TulentekoappImage1 from '../images/tulentekoapp.png';
 import TulentekoappImage2 from '../images/tulentekoapp_1.png';
@@ -50,10 +51,9 @@ const portfolioItems = [
   {
     title: 'Once Upon AI...',
     type: 'MOBILE APP',
-    description: `My latest solo project: A mobile app to produce AI generated stories and possibly monetize it.\n
-    Stories are generated and read out loud by an external AI. UX has been the cornerstone of my development because... backends are easy, UI/UX hard. 
-    The app is on development stage and will be published to Google Play and Apple Store with OAuth-authentication applied to all major providers.\n
-    Tech stack includes Spring Boot backend with Docker, TypeScript React-Native frontend with Expo framework, Firebase file storage and the app will be published to Cloud Run eventually.`,
+    description: `Solo mobile application for AI-generated stories with text-to-speech playback. User experience has been a primary focus alongside backend architecture.\n
+    The app is in active development and planned for release on Google Play and the Apple App Store, with OAuth authentication across major providers.\n
+    Tech stack: Spring Boot backend with Docker, TypeScript React Native frontend with Expo, Firebase storage, and planned deployment to Cloud Run.`,
     technologies: 'TypeScript, Java Spring Boot, React-Native, Expo',
     skills: 'Full-Stack Development, Mobile Development, AI, UI/UX, Monetization, API Integration, SQL',
     databases: 'PostgreSQL, Firebase',
@@ -65,7 +65,7 @@ const portfolioItems = [
     type: 'API',
     description: `Four man development of an API for a fundamental flaw in cyber security. Enhancing the safety of personnel and organizations. \n
     Roughly 24% of all cybersecurity incidents are caused by human error. This API would decrease that. Too bad we're on NDA...`,
-    technologies: 'Python, FastAPI, Docker, Spring Boot,CI/CD',
+    technologies: 'Python, FastAPI, Docker, Spring Boot, CI/CD',
     skills: 'API Development and Integration, Backend Development, Dockerization',
     databases: 'PostgreSQL',
     images: [topsecret],
@@ -167,30 +167,37 @@ const Portfolio: React.FC = () => {
     };
   
     return (
-      <section id="portfolio" className="p-8 text-white">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-5xl font-bold mb-8 flex items-center">
-            Portfolio.
-            <div className="flex-grow h-px bg-gray-500 ml-4 mt-8"></div>
-          </h2>
-          <p className='italic text-gray-400 mb-4 flex items-center mb-5'>* Projects part of my current employment are marked with <FaFire className='ml-2 text-orange-500'/></p>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div className="px-2 py-8 lg:px-4">
+        <div className="mx-auto max-w-6xl">
+          <SectionHeader
+            title="Portfolio"
+            subtitle="Selected projects from professional work, studies, and personal development"
+          />
+          <p className="-mt-6 mb-8 flex items-center text-sm text-gray-500">
+            Projects from current employment are marked with
+            <FaFire className="ml-2 text-orange-500" aria-hidden="true" />
+          </p>
+          <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
             {portfolioItems.map((item, index) => (
-              <div
+              <button
+                type="button"
                 key={index}
-                className="bg-gray-800 p-4 rounded-lg shadow-lg cursor-pointer"
+                className="card group cursor-pointer overflow-hidden p-0 text-left transition-colors hover:border-accent/40"
                 onClick={() => openModal(item)}
               >
                 <img
                   src={item.images[0]}
                   alt={item.title}
-                  className="rounded-t-lg w-full h-48 object-cover"
+                  className="h-48 w-full object-cover transition-transform duration-300 group-hover:scale-[1.02]"
                 />
                 <div className="p-4">
-                  <h3 className="text-xl font-bold mb-2">{item.title}</h3>
-                  <p className="text-gray-400 flex items-center justify-between">{item.type.split(' ').slice(0, 5).join(' ')} {item.icon}</p>
+                  <h3 className="mb-2 text-lg font-bold">{item.title}</h3>
+                  <p className="flex items-center justify-between text-sm text-gray-400">
+                    {item.type.split(' ').slice(0, 5).join(' ')}
+                    {item.icon}
+                  </p>
                 </div>
-              </div>
+              </button>
             ))}
           </div>
           <Modal
@@ -205,7 +212,7 @@ const Portfolio: React.FC = () => {
             images={selectedProject?.images || []}
           />
         </div>
-      </section>
+      </div>
     );
   };
   

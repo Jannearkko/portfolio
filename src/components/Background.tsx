@@ -1,63 +1,23 @@
-import React, { useEffect, useRef } from 'react';
+import React from 'react';
 
-const MatrixBackground: React.FC = () => {
-    const canvasRef = useRef<HTMLCanvasElement>(null);
+const Background: React.FC = () => (
+  <div className="fixed inset-0 -z-10 overflow-hidden bg-surface-950">
+    <div className="absolute inset-0 bg-gradient-to-br from-surface-950 via-surface-900 to-surface-950" />
+    <div
+      className="absolute inset-0 opacity-[0.35]"
+      style={{
+        backgroundImage:
+          'radial-gradient(circle at 20% 20%, rgba(59, 130, 246, 0.08) 0%, transparent 50%), radial-gradient(circle at 80% 80%, rgba(59, 130, 246, 0.05) 0%, transparent 40%)',
+      }}
+    />
+    <div
+      className="absolute inset-0 opacity-[0.04]"
+      style={{
+        backgroundImage: 'linear-gradient(rgba(255,255,255,0.5) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.5) 1px, transparent 1px)',
+        backgroundSize: '64px 64px',
+      }}
+    />
+  </div>
+);
 
-    useEffect(() => {
-        const canvas = canvasRef.current;
-        const ctx = canvas!.getContext('2d')!;
-        canvas!.width = window.innerWidth;
-        canvas!.height = window.innerHeight;
-
-        ctx.fillStyle = 'black';
-        ctx.fillRect(0, 0, canvas!.width, canvas!.height);
-
-        const characters = 'αβγδεζηθικλμνξοπρστυφχψω';
-        const fontSize = 16;
-        const largerFontSize = 24; // Larger font size for bright characters
-        const columns = canvas!.width / fontSize;
-
-        const drops: number[] = Array(Math.floor(columns)).fill(1);
-        const brightCharacters: { [key: number]: { duration: number, fontSize: number } } = {}; // To track bright characters and their font size
-
-        function draw() {
-            ctx.fillStyle = 'rgba(0, 0, 0, 0.05)';
-            ctx.fillRect(0, 0, canvas!.width, canvas!.height);
-
-            for (let i = 0; i < drops.length; i++) {
-                const text = characters.charAt(Math.floor(Math.random() * characters.length));
-
-                // Determine if this character should be brighter and larger
-                if (brightCharacters[i]) {
-                    ctx.fillStyle = 'rgba(0, 0, 255, 1)'; // Brighter blue
-                    ctx.font = `${brightCharacters[i].fontSize}px 'Noto Sans Egyptian Hieroglyphs'`;
-                    brightCharacters[i].duration--; // Decrease the count for how long it stays bright
-                    if (brightCharacters[i].duration <= 0) {
-                        delete brightCharacters[i]; // Remove from bright characters list
-                    }
-                } else {
-                    ctx.fillStyle = 'rgba(0, 0, 255, 0.555)'; // Regular blue
-                    ctx.font = `${fontSize}px 'Noto Sans Egyptian Hieroglyphs'`;
-                    if (Math.random() > 0.995) { // Small chance to become bright
-                        brightCharacters[i] = { duration: 10, fontSize: largerFontSize }; // Stay bright and larger for 20 frames
-                    }
-                }
-
-                ctx.fillText(text, i * fontSize, drops[i] * fontSize);
-
-                if (drops[i] * fontSize > canvas!.height && Math.random() > 0.975) {
-                    drops[i] = 0;
-                }
-                drops[i]++;
-            }
-        }
-
-        const interval = setInterval(draw, 100);
-
-        return () => clearInterval(interval);
-    }, []);
-
-    return <canvas ref={canvasRef} className="absolute top-0 left-0 w-full h-full"></canvas>;
-};
-
-export default MatrixBackground;
+export default Background;

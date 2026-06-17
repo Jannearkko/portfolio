@@ -1,203 +1,172 @@
 import React from 'react';
 import { FaUniversity, FaBriefcase, FaCertificate } from 'react-icons/fa';
-import { CircularProgressbar, buildStyles } from 'react-circular-progressbar';
-import 'react-circular-progressbar/dist/styles.css';
 import useIntersectionObserver from './UseIntersectionObserver';
+import SectionHeader from './SectionHeader';
 
 const educationData = [
   {
     degree: 'Bachelor of IT',
-    institution: 'JAMK University of Applied Science',
-    years: '2021 - 2024',
+    institution: 'JAMK University of Applied Sciences',
+    years: '2021 – 2024',
     points: '240 ECTS',
-    gpa: 'GPA 4.6/5',
-    description: 'Advanced studies on software development and AI',
-    completed: 'Completed 100 %'
+    gpa: 'GPA 4.6 / 5',
+    description: 'Advanced studies in software development and artificial intelligence',
+    completed: 'Completed',
   },
 ];
 
 const experienceData = [
   {
     position: 'System Specialist',
-    company: 'Keski-suomen Hyvinvointialue | Keski-suomen pelastuslaitos',
-    years: 'May 2024 - November 2024',
-    description: 'Creating new software to aid in the daily work of the rescue personnel. Enhancing old software and providing expertise and support in all aspects of IT to administrative personnel.'
+    company: 'Keski-Suomen hyvinvointialue · Keski-Suomen pelastuslaitos',
+    years: 'May 2024 – November 2024',
+    description:
+      'Developed software to support daily operations for rescue personnel. Maintained existing systems and provided IT expertise to administrative staff.',
   },
 ];
 
-const codingSkills = [
-
-  { skill: 'TypeScript', percentage: 98 },
-  { skill: 'React', percentage: 96 },
-  { skill: 'Node.js', percentage: 89 },
-  { skill: 'Python', percentage: 92 },
-  { skill: 'REST API', percentage: 94 },
-  { skill: 'ML', percentage: 79 },
-  { skill: 'C#', percentage: 55 },
-  { skill: 'C++', percentage: 43 },
-  { skill: 'OOP', percentage: 85 },
-  { skill: 'Spring Boot', percentage: 72 },
-
+const skillCategories = [
+  {
+    title: 'Languages & Frameworks',
+    skills: ['TypeScript', 'React', 'Node.js', 'Python', 'Spring Boot', 'C#', 'C++'],
+  },
+  {
+    title: 'Practices & Tools',
+    skills: ['REST APIs', 'Machine Learning', 'OOP', 'Docker', 'CI/CD', 'Figma', 'PostgreSQL'],
+  },
+  {
+    title: 'Professional strengths',
+    skills: ['Communication', 'Teamwork', 'Problem solving', 'Time management', 'Self-directed learning'],
+  },
 ];
 
-const designSkills = [
-  { skill: 'Figma', percentage: 39 },
-  { skill: 'Gaea', percentage: 18 },
-  { skill: 'UE5', percentage: 20 },
-  { skill: 'Mockups', percentage: 62 },
-];
-
-const softSkills = [
-    { skill: 'Communication', percentage: 90 },
-    { skill: 'Teamwork', percentage: 85 },
-    { skill: 'Problem Solving', percentage: 95 },
-    { skill: 'Time Management', percentage: 92 },
-    { skill: 'Self-driven', percentage: 99 },
-];
 const certificates = [
-  { certificate: 'EITCA/GCML', id: 'EITC/AI/GCML/SLJ24004528', type: 'EITC The European Information Technologies Certification Programme', programme:'EITC/AI/GCML Google Cloud Machine Learning', issued: 'April 2024', validateAddress: 'https://www.eitci.org/validate' },
-  { certificate: 'EITCA/GCP', id: 'EITC/CL/GCP/SLJ24004528', type: 'EITC The European Information Technologies Certification Programme', programme:'EITC/CL/GCP Google Cloud Platform', issued: 'April 2024', validateAddress: 'https://www.eitci.org/validate'},
-  { certificate: 'EITCA/PPF', id: 'EITC/CP/PPF/SLJ24004528', type: 'EITC The European Information Technologies Certification Programme', programme:'EITC/CP/PPF Python Programming Fundamentals', issued: 'April 2024', validateAddress: 'https://www.eitci.org/validate'},
-]
-  
+  {
+    certificate: 'EITCA/GCML',
+    id: 'EITC/AI/GCML/SLJ24004528',
+    type: 'EITC – European Information Technologies Certification Programme',
+    programme: 'Google Cloud Machine Learning',
+    issued: 'April 2024',
+    validateAddress: 'https://www.eitci.org/validate',
+  },
+  {
+    certificate: 'EITCA/GCP',
+    id: 'EITC/CL/GCP/SLJ24004528',
+    type: 'EITC – European Information Technologies Certification Programme',
+    programme: 'Google Cloud Platform',
+    issued: 'April 2024',
+    validateAddress: 'https://www.eitci.org/validate',
+  },
+  {
+    certificate: 'EITCA/PPF',
+    id: 'EITC/CP/PPF/SLJ24004528',
+    type: 'EITC – European Information Technologies Certification Programme',
+    programme: 'Python Programming Fundamentals',
+    issued: 'April 2024',
+    validateAddress: 'https://www.eitci.org/validate',
+  },
+];
+
 const Resume: React.FC = () => {
-    const options: IntersectionObserverInit = {
-        root: null,
-        rootMargin: '0px',
-        threshold: 0.1,
-    };
+  const resumeRef = useIntersectionObserver({
+    root: null,
+    rootMargin: '0px',
+    threshold: 0.1,
+  });
 
-    const resumeRef = useIntersectionObserver(options);
+  return (
+    <div ref={resumeRef} className="px-2 py-8 lg:px-4">
+      <div className="mx-auto max-w-6xl">
+        <SectionHeader
+          title="Resume"
+          subtitle="Education, experience, skills, and certifications"
+        />
 
-    return (
-      <section ref={resumeRef} id="resume" className="p-8 text-white">
-        <div className="max-w-6xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {/* Education Section */}
-            <div>
-              <h2 className="text-3xl font-bold mb-4 flex items-center">
-                <FaUniversity className="mr-2" /> Education.
-                <div className="flex-grow h-px bg-gray-500 ml-4 mt-5"></div>
-              </h2>
-              {educationData.map((item, index) => (
-                <div key={index} className="mb-8">
-                  <h3 className="text-xl font-bold">{item.degree}</h3>
-                  <p className="text-gray-400">{item.institution}</p>
-                  <p className="text-gray-400">{item.years}</p>
-                  <p className="text-gray-400">{item.points}</p>
-                  <p className="text-gray-400">{item.gpa}</p>
-                  <p className="text-gray-400">{item.description}</p>
-                  <p className="text-gray-300 font-bold">{item.completed}</p>
-                </div>
-              ))}
-            </div>
-            {/* Experience Section */}
-            <div>
-              <h2 className="text-3xl font-bold mb-4 flex items-center">
-                <FaBriefcase className="mr-2" /> Experience.
-                <div className="flex-grow h-px bg-gray-500 ml-4 mt-5"></div>
-              </h2>
-              {experienceData.map((item, index) => (
-                <div key={index} className="mb-8">
-                  <h3 className="text-xl font-bold">{item.position}</h3>
-                  <p className="text-gray-400">{item.company}</p>
-                  <p className="text-gray-400">{item.years}</p>
-                  <p className="text-gray-400">{item.description}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-          {/* Coding Skills Section */}
-          <div className="mt-16">
-            <h2 className="text-3xl font-bold mb-4">Coding Skills.</h2>
-            <div className="flex space-x-4 overflow-x-auto">
-              {codingSkills.map((skill, index) => (
-                <div key={index} className="w-24 h-24 flex flex-col items-center">
-                  <CircularProgressbar
-                    value={skill.percentage}
-                    text={`${skill.percentage}%`}
-                    styles={buildStyles({
-                      textColor: "white",
-                      pathColor: "#00d1b2",
-                      trailColor: "#363636"
-                    })}
-                  />
-                  <p className="text-gray-400 mt-2 text-center">{skill.skill}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-          {/* Design Skills and Soft Skills Section */}
-          <div className="mt-16 grid grid-cols-1 lg:grid-cols-2 gap-8">
-            <div>
-              <h2 className="text-3xl font-bold mb-4">Design Skills.</h2>
-              <div className="flex space-x-4 overflow-x-auto">
-                {designSkills.map((skill, index) => (
-                  <div key={index} className="w-20 h-24 flex flex-col items-center">
-                    <CircularProgressbar
-                      value={skill.percentage}
-                      text={`${skill.percentage}%`}
-                      styles={buildStyles({
-                        textColor: "white",
-                        pathColor: "#ff3860",
-                        trailColor: "#363636"
-                      })}
-                    />
-                    <p className="text-gray-400 mt-2 text-center">{skill.skill}</p>
-                  </div>
-                ))}
+        <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
+          <div>
+            <h3 className="mb-4 flex items-center gap-2 text-xl font-semibold">
+              <FaUniversity className="text-accent" />
+              Education
+            </h3>
+            {educationData.map((item) => (
+              <div key={item.degree} className="card mb-4">
+                <h4 className="text-lg font-bold">{item.degree}</h4>
+                <p className="text-gray-400">{item.institution}</p>
+                <p className="text-gray-400">{item.years}</p>
+                <p className="text-gray-400">{item.points} · {item.gpa}</p>
+                <p className="mt-2 text-gray-300">{item.description}</p>
+                <p className="mt-2 text-sm font-medium text-accent">{item.completed}</p>
               </div>
-            </div>
-            <div className='-ml-20'>
-              <h2 className="text-3xl font-bold mb-4">Soft Skills.</h2>
-              <div className="flex space-x-5">
-                {softSkills.map((skill, index) => (
-                  <div key={index} className="w-24 h-24 flex flex-col items-center">
-                    <CircularProgressbar
-                      value={skill.percentage}
-                      text={`${skill.percentage}%`}
-                      styles={buildStyles({
-                        textColor: "white",
-                        pathColor: "#ffdd57",
-                        trailColor: "#363636",
-                      })}
-                    />
-                    <p className="text-gray-400 mt-2 text-center text-sm whitespace-nowrap">{skill.skill}</p>
-                  </div>
-                ))}
-              </div>
-            </div>
-            
+            ))}
           </div>
-            <h2 className="text-3xl font-bold mb-4 flex items-center mt-20">
-                  <FaCertificate className="mr-2" /> Certificates.
-                  <div className="flex-grow h-px bg-gray-500 ml-4 mt-5"></div>
-            </h2>
-            
-            <p className='italic text-gray-400 mb-4'>* To validate EITCA-certificates, click the Validate-button and insert the certificate ID and my name.</p>
 
-          <div className='mt-10 grid grid-cols-1 md:grid-cols-2 gap-8'>
-              {certificates.map((item, index) => (
-                <div key={index} className="mb-8">
-                  <h3 className="text-xl font-bold">{item.certificate}</h3>
-                  <p className="text-gray-400">Type: {item.type}</p>
-                  <p className="text-gray-400">ID: {item.id}</p>
-                  <p className="text-gray-400">Name: {item.programme}</p>
-                  <p className="text-gray-400">Issued: {item.issued}</p>
-                  <a
-                    href={item.validateAddress}
-                    className="text-white bg-blue-500 hover:bg-blue-700 py-2 px-4 rounded-xl transition duration-300 inline-block mt-2"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    Validate
-                  </a>
-                </div>
-              ))}
-            </div>
+          <div>
+            <h3 className="mb-4 flex items-center gap-2 text-xl font-semibold">
+              <FaBriefcase className="text-accent" />
+              Experience
+            </h3>
+            {experienceData.map((item) => (
+              <div key={item.position} className="card mb-4">
+                <h4 className="text-lg font-bold">{item.position}</h4>
+                <p className="text-gray-400">{item.company}</p>
+                <p className="text-gray-400">{item.years}</p>
+                <p className="mt-2 text-gray-300">{item.description}</p>
+              </div>
+            ))}
+          </div>
         </div>
-      </section>
-    );
-  };
-  
-  export default Resume;
+
+        <div className="mt-12">
+          <h3 className="mb-6 text-xl font-semibold">Skills</h3>
+          <div className="grid gap-6 lg:grid-cols-3">
+            {skillCategories.map((category) => (
+              <div key={category.title} className="card">
+                <h4 className="mb-3 text-sm font-semibold uppercase tracking-wide text-gray-500">
+                  {category.title}
+                </h4>
+                <ul className="flex flex-wrap gap-2">
+                  {category.skills.map((skill) => (
+                    <li key={skill} className="skill-pill">
+                      {skill}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <div className="mt-12">
+          <h3 className="mb-2 flex items-center gap-2 text-xl font-semibold">
+            <FaCertificate className="text-accent" />
+            Certificates
+          </h3>
+          <p className="mb-6 text-sm italic text-gray-500">
+            To validate EITCA certificates, use the Validate button and enter the certificate ID with my name.
+          </p>
+          <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
+            {certificates.map((item) => (
+              <div key={item.id} className="card">
+                <h4 className="text-lg font-bold">{item.certificate}</h4>
+                <p className="text-sm text-gray-400">{item.type}</p>
+                <p className="mt-2 text-sm text-gray-400">ID: {item.id}</p>
+                <p className="text-sm text-gray-400">{item.programme}</p>
+                <p className="text-sm text-gray-400">Issued: {item.issued}</p>
+                <a
+                  href={item.validateAddress}
+                  className="btn-primary mt-4 inline-block"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Validate
+                </a>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default Resume;

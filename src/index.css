@@ -8,34 +8,57 @@ html {
 
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #08080c;
+  color: #f3f4f6;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
-/* Works on Firefox */
-* {
-  scrollbar-width: thin;
-  scrollbar-color: rgba(0,0,255,0.555) #2d3748;
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
 }
 
-/* Works on Chrome, Edge, and Safari */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #3b82f6 #1f1f2b;
+}
+
 *::-webkit-scrollbar {
-  width: 4px;
+  width: 6px;
 }
 
 *::-webkit-scrollbar-track {
-  background: #2d3748;
+  background: #1f1f2b;
 }
 
 *::-webkit-scrollbar-thumb {
-  background-color: rgba(0,0,255,0.555);
-  border-radius: 20px;
-  border: 3px solid orange;
+  background-color: #3b82f6;
+  border-radius: 9999px;
+}
+
+@layer components {
+  .section-heading {
+    @apply font-heading text-3xl md:text-4xl font-bold text-white;
+  }
+
+  .section-divider {
+    @apply mt-4 h-px w-full bg-gradient-to-r from-accent/50 to-transparent;
+  }
+
+  .card {
+    @apply bg-surface-800 border border-surface-600/50 rounded-xl p-5 shadow-card;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center justify-center rounded-lg bg-accent px-5 py-2.5 text-sm font-medium text-white transition-colors hover:bg-accent-hover;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center rounded-lg border border-surface-600 bg-surface-700 px-5 py-2.5 text-sm font-medium text-white transition-colors hover:border-accent/50 hover:bg-surface-600;
+  }
+
+  .skill-pill {
+    @apply rounded-full border border-surface-600 bg-surface-700/80 px-3 py-1 text-sm text-gray-300;
+  }
 }
