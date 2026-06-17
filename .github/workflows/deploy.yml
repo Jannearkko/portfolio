@@ -5,41 +5,31 @@ on:
     branches:
       - main
 
+permissions:
+  contents: write
+
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout the repository
-      uses: actions/checkout@v4
+      - name: Checkout the repository
+        uses: actions/checkout@v4
 
-    - name: Set up Node.js
-      uses: actions/setup-node@v4
-      with:
-        node-version: '20'
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
 
-    - name: Install dependencies
-      run: npm ci
+      - name: Install dependencies
+        run: npm ci
 
-    - name: Build the project
-      run: npm run build
+      - name: Build the project
+        run: npm run build
 
-    - name: Deploy to GitHub Pages
-      env:
-        SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
-        GIT_AUTHOR_NAME: "github-actions[bot]"
-        GIT_AUTHOR_EMAIL: "github-actions[bot]@users.noreply.github.com"
-        GIT_COMMITTER_NAME: "github-actions[bot]"
-        GIT_COMMITTER_EMAIL: "github-actions[bot]@users.noreply.github.com"
-      run: |
-        mkdir -p ~/.ssh
-        echo "$SSH_PRIVATE_KEY" > ~/.ssh/id_ed25519
-        chmod 600 ~/.ssh/id_ed25519
-        ssh-keyscan github.com >> ~/.ssh/known_hosts
-        git config --global user.name "${GIT_AUTHOR_NAME}"
-        git config --global user.email "${GIT_AUTHOR_EMAIL}"
-        git remote set-url origin git@github.com:${{ github.repository }}.git
-        npx gh-pages -d build -r git@github.com:${{ github.repository }}.git
-
-
-
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./build
